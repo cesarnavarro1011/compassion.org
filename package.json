@@ -15,7 +15,8 @@
     "react-native": "0.71.2",
     "react-native-dom-expo": "^0.0.12",
     "react-native-web": "^0.18.12",
-    "react-router-dom": "^6.8.0"
+    "react-router-dom": "^6.8.0",
+    "react-native-svg": "13.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
