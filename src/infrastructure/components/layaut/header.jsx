@@ -8,9 +8,10 @@ export default function Header() {
       {/* <Image source={{uri:'assets:/img/logos/sembrando_la_preciosa_semilla.gif'}} /> */}
       <Text style={styles.container_header__logo}>LOGO</Text>
 
-      <Pressable style={styles.button} >
-        <Text style={styles.text}>button</Text>
-      </Pressable>
+      <View style={styles.container_nav}>
+        <Text>Inicio</Text>
+        <Text>salir</Text>
+      </View>
     </View>
   );
 
@@ -26,6 +27,10 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     marginTop: 30,
+  },
+
+  container_nav: {
+
   },
 
   container_header__logo: {
@@ -51,23 +56,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     letterSpacing: 0.25,
     color: 'white',
-    position: absolute,
+    position: "absolute",
     zindex: 2,
     right: 20,
-    /* left: 20px; */
-    top: 20,
-    height: 50,
-    width: 50,
-    textalign: center,
-    lineheight: 50,
-    borderRadius: 50,
-    fontsize: 20,
-    color: white,
-    cursor: pointer,
-    /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
-    /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
-   /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */
-    background: black,
-    // transition: all 0.3s ease-in-out,
+
   },
 });
