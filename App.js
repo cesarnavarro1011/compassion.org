@@ -1,10 +1,10 @@
-import react from "react";
+import React from "react";
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Header from './src/infrastructure/components/layaut/header';
 import Home from "./src/infrastructure/view/home";
 import { NavigationContainer } from '@react-navigation/native';
-import PerfilPartaker from "./src/infrastructure/components/Perfil-partaker";
+import PerfilPartaker from "./src/infrastructure/view/Perfil-partaker";
 
 export default function App() {
   return (

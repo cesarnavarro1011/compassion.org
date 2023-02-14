@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native';
-import CardHomeParticipants from '../components/card-home-participants';
+import CardReportHome from '../components/card-report-home';
 
 export default function Home() {
 
@@ -17,12 +17,12 @@ export default function Home() {
       </View>
 
       <View style={styles.container_data}>
-        <CardHomeParticipants/>
-        <CardHomeParticipants/>
-        <CardHomeParticipants/>
-        <CardHomeParticipants/>
-        <CardHomeParticipants/>
-        <CardHomeParticipants/>
+        <CardReportHome/>
+        <CardReportHome/>
+        <CardReportHome/>
+        <CardReportHome/>
+        <CardReportHome/>
+        <CardReportHome/>
       </View>
     </View>
     
