@@ -32,7 +32,13 @@ export default function PerfilPartaker() {
 
                         <View style={styles.container_data__report}>
                             <Text style={styles.container_data_report__reports}>Reporte</Text>
-                            <CardReportPerfil/>
+
+                            <View style={styles.container_data__card_report}>
+                                <CardReportPerfil/>
+                                <CardReportPerfil/>
+                                <CardReportPerfil/>
+                                <CardReportPerfil/>
+                            </View>
                         </View>
 
                         <View style={styles.container_data__comunication}>
@@ -136,6 +142,13 @@ const styles = StyleSheet.create({
         paddingLeft: 3,
     },
 
-
-    
+    container_data__card_report: {
+        backgroundColor: "blue",
+        height: "100%",
+        width: "auto",
+        display: "flex",
+        justifyContent: 'space-around',
+        flexDirection: "row",
+        flexWrap: "wrap",
+    },
 })
