@@ -13,17 +13,17 @@ const styles = StyleSheet.create({
 
     container_data_card_report__details: {
         backgroundColor: "red",
-        width: 155,
-        height: 150,
-        marginBottom: 10,
-        borderRadius: 10,
+        width: 150,
+        height: 120,
+        marginBottom: 5,
+        borderRadius: 5,
     },
 
     container_data_card_report__details_title: {
         // backgroundColor: "green", 
         textAlign: "center",
         width: "100%",
-        height: 50,
+        height: 40,
         lineHeight: 50,
         fontWeight: "bold",
         fontSize: 19,
