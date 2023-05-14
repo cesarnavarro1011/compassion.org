@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function CardHomeParticipants() {
+export default function CardStatistics() {
 
   return (
     <View style={styles.container}>
