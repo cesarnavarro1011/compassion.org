@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import Header from './src/infrastructure/components/layaut/header';
 import Home from "./src/infrastructure/view/home";
 import { NavigationContainer } from '@react-navigation/native';
-import Menu from "./src/infrastructure/components/menu";
+import Menu from "./src/infrastructure/view/menu";
 
 export default function App() {
   return (

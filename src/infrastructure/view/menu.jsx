@@ -1,5 +1,6 @@
 import { View, StyleSheet } from "react-native";
 import { Button, Text } from "react-native";
+import MenuOpcions from "../components/menu-opcions";
 
 export default function Menu() {
 
@@ -21,11 +22,12 @@ export default function Menu() {
           </View>
           <View style={styles.content_perfil__data}>
             <Text style={styles.data__username}>César Navarro</Text>
-            <Button style={styles.data__button_editar_perfil} title="Ver perfil" onPress={""}/>
+              <Button style={styles.data__button_editar_perfil} title="Ver perfil" onPress={""}/>
           </View>
         </View>
 
         <View style={styles.container_submenu__infomation}>
+            <MenuOpcions/>
         </View>
 
         <View style={styles.container_submenu__exit}>
@@ -69,6 +71,7 @@ const styles = StyleSheet.create({
   },
 
   container_submenu__content_perfil: {
+
     backgroundColor: "blue",
     width: '85%',
     height: 100,
@@ -81,6 +84,7 @@ const styles = StyleSheet.create({
   },
 
   content_perfil__perfil: {
+
     backgroundColor: "yellow",
     width: 90,
     height: 90,
@@ -88,11 +92,13 @@ const styles = StyleSheet.create({
   },
 
   content_perfil__data: {
+
     width: 220,
     height: "100%",
   },
 
   data__username: {
+
     backgroundColor: "yellow",
     color: "red",
     width: "100%",
@@ -102,6 +108,7 @@ const styles = StyleSheet.create({
   },
 
   container_submenu__infomation: {
+
     backgroundColor: "green",
     width: '90%',
     height: 460,
@@ -109,16 +116,17 @@ const styles = StyleSheet.create({
   },
 
   container_submenu__exit: {
+
     backgroundColor: "blue",
     width: '90%',
-    height: 50,
+    height: 40,
     marginTop: 10,
     borderRadius: 10,
   },
 
   exit__button_exit: {
+
     height: 100,
   },
-
 
 });
