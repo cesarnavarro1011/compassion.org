@@ -16,12 +16,12 @@ export default function Home() {
       </View>
 
       <View style={styles.container_data}>
-        <CardHomeParticipants/>
-        <CardHomeParticipants/>
-        <CardHomeParticipants/>
-        <CardHomeParticipants/>
-        <CardHomeParticipants/>
-        <CardHomeParticipants/>
+        <CardReportHome/>
+        <CardReportHome/>
+        <CardReportHome/>
+        <CardReportHome/>
+        <CardReportHome/>
+        <CardReportHome/>
       </View>
     </View>
     

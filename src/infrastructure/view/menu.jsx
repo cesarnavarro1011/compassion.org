@@ -22,11 +22,16 @@ export default function Menu() {
           </View>
           <View style={styles.content_perfil__data}>
             <Text style={styles.data__username}>César Navarro</Text>
+            <Text style={styles.data__ocupation}>ocupatión</Text>
               <Button style={styles.data__button_editar_perfil} title="Ver perfil" onPress={""}/>
           </View>
         </View>
 
         <View style={styles.container_submenu__infomation}>
+            <MenuOpcions/>
+            <MenuOpcions/>
+            <MenuOpcions/>
+            <MenuOpcions/>
             <MenuOpcions/>
         </View>
 
@@ -73,8 +78,8 @@ const styles = StyleSheet.create({
   container_submenu__content_perfil: {
 
     backgroundColor: "blue",
-    width: '85%',
-    height: 100,
+    width: '87%',
+    height: 105,
     marginTop: 10,
     borderRadius: 10,
     display: "flex",
@@ -100,11 +105,20 @@ const styles = StyleSheet.create({
   data__username: {
 
     backgroundColor: "yellow",
-    color: "red",
+    color: "white",
     width: "100%",
-    height: 65,
     fontSize: 22,
-    padding: 10,
+    paddingLeft: 10,
+    paddingTop: 10,
+    paddingBottom: 5,
+
+  },
+
+  data__ocupation: {
+    paddingLeft: 10,
+    paddingBottom: 0,
+    height: 25,
+
   },
 
   container_submenu__infomation: {
@@ -125,8 +139,7 @@ const styles = StyleSheet.create({
   },
 
   exit__button_exit: {
-
-    height: 100,
+    height: "100%",
   },
 
 });
