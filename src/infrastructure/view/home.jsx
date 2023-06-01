@@ -2,7 +2,6 @@ import { StyleSheet, Text, View } from 'react-native';
 import CardReportHome from '../components/card-report-home';
 
 export default function Home() {
-
   return (
     <View style={styles.container}>
       <View style={styles.container_user}>

@@ -4,7 +4,9 @@ import { StyleSheet, Text, View } from 'react-native';
 import Header from './src/infrastructure/components/layaut/header';
 import Home from "./src/infrastructure/view/home";
 import { NavigationContainer } from '@react-navigation/native';
+import Menu from "./src/infrastructure/view/menu";
 import PerfilPartaker from "./src/infrastructure/view/Perfil-partaker";
+import List from "./src/infrastructure/view/list";
 
 export default function App() {
   return (
@@ -13,8 +15,9 @@ export default function App() {
         <StatusBar style="auto" />
         <Header/>
         {/* <Home/> */}
-        
-        <PerfilPartaker/>
+        {/* <PerfilPartaker/> */}
+        <Menu/>
+        {/* <List/> */}
       </View>
     </NavigationContainer>
   );

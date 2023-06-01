@@ -12,9 +12,9 @@ export default function CardReportPerfil() {
 const styles = StyleSheet.create({
 
     container_data_card_report__details: {
-        backgroundColor: "#9AD1D4",
-        width: 150,
-        height: 120,
+        backgroundColor: "red",
+        width: "100%",
+        height: 85,
         marginBottom: 5,
         borderRadius: 5,
     },
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
         textAlign: "center",
         width: "100%",
         height: 40,
-        lineHeight: 50,
+        lineHeight: 40,
         fontWeight: "bold",
         fontSize: 19,
     },
@@ -33,8 +33,8 @@ const styles = StyleSheet.create({
     container_data_card_report__details_status: {
         // backgroundColor: "yellow", 
         width: "100%",
-        height: 80,
-        lineHeight: 80,
+        height: 50,
+        lineHeight: 40,
         fontWeight: "bold",
         textAlign: "center",  
         fontSize: 25,
