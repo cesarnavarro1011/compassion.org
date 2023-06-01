@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
     },
 
     container_data_report__reports: {
-        backgroundColor: "#daa520",
+        backgroundColor: "#2f4f4f",
         fontSize: 22,
         height: 47,
         lineHeight: 47,
@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
     },
 
     container_data__card_report: {
-        backgroundColor: "blue",
+        // backgroundColor: "blue",
         height: "100%",
         width: "auto",
         display: "flex",
