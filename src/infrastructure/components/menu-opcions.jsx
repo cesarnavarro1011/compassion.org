@@ -1,7 +1,6 @@
 import { View, StyleSheet, Text } from "react-native";
 
 export default function MenuOpcions() {
-
   return (
     <View style={styles.container}>
       <Text style={styles.title}>name</Text>
@@ -12,18 +11,18 @@ export default function MenuOpcions() {
 const styles = StyleSheet.create({
 
   container: {
-    backgroundColor: "red",
+    backgroundColor: "#36A4C6",
     width: '100%',
-    height: 85,
-    borderRadius: 10,
+    height: 73,
+    borderRadius: 5,
     marginTop: 5,
-    padding: 20,
-
+    paddingTop: 22,
+    paddingLeft: 15,
   },
 
   title: {
-    fontSize: 23,
-    paddingLeft: 10,
+    color: "white",
+    fontSize: 20,
   },
 
 })

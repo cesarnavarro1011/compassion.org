@@ -1,16 +1,16 @@
 import { View, StyleSheet } from "react-native";
-import { Button, Text } from "react-native";
+import { Button, Text, ScrollView } from "react-native";
 import MenuOpcions from "../components/menu-opcions";
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
-export default function Menu() {
-
+export default function Menu({drawer}) {
   return (
-    <View style={styles.container_menu}>
-          
+    <ScrollView  style={styles.container_menu}>
       <View style={styles.container_menu__closed}>
-        <Button
-          style={styles.container_menu_closed__button}
-          onPress={""}
+        <AntDesign style={styles.container_menu_closed__button}
+          name="menufold"
+          onPress={() => drawer.current?.closeDrawer()}
           title="Closed"
           color="back"
           accessibilityLabel="closed menu"
@@ -23,7 +23,9 @@ export default function Menu() {
           <View style={styles.content_perfil__data}>
             <Text style={styles.data__username}>César Navarro</Text>
             <Text style={styles.data__ocupation}>ocupatión</Text>
-              <Button style={styles.data__button_editar_perfil} title="Ver perfil" onPress={""}/>
+            <View style={styles.data__button_editar_perfil}>
+              <Button title="Ver perfil" onPress={""}/>
+            </View>
           </View>
         </View>
 
@@ -33,42 +35,49 @@ export default function Menu() {
             <MenuOpcions/>
             <MenuOpcions/>
             <MenuOpcions/>
+            <MenuOpcions/>
+            <MenuOpcions/>
+            <MenuOpcions/>
         </View>
 
         <View style={styles.container_submenu__exit}>
-          <Button style={styles.exit__button_exit} title="Salir" onPress={""}/>
+        <Text style={styles.exit__text_exit}>Salir</Text>
+          <Ionicons style={styles.exit__button_exit} 
+            name="md-exit-outline"
+            title="Salir" 
+            onPress={""}/>
         </View>
-        
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
 
   container_menu: {
-    backgroundColor: "red",
+    backgroundColor: "#22AED1",
     width: '100%',
     height: '100%',
     position: "absolute",
     top: 30,
     display: "flex",
-    alignItems: "flex-end",
+    // alignItems: "flex-end",
   },
 
   container_menu__closed: {
-    justifyContent: "center",
-    width: 80,
-    height: 65,
-    marginRight: 10,
+    width: "100%",
+    justifyContent: "flex-end",
+    alignItems: "flex-end",
+    height: 60,
+    paddingRight: 12,
   },
 
   container_menu_closed__button: {
-    height: 100,
+    fontSize: 40,
   },
 
   container_submenu: {
-    backgroundColor: "purple",
+    // backgroundColor: "purple",
     width: '100%',
     height: '100%',
     display: "flex",
@@ -76,9 +85,8 @@ const styles = StyleSheet.create({
   },
 
   container_submenu__content_perfil: {
-
-    backgroundColor: "blue",
-    width: '87%',
+    backgroundColor: "#22AEA9",
+    width: '92%',
     height: 105,
     marginTop: 10,
     borderRadius: 10,
@@ -89,7 +97,6 @@ const styles = StyleSheet.create({
   },
 
   content_perfil__perfil: {
-
     backgroundColor: "yellow",
     width: 90,
     height: 90,
@@ -97,49 +104,63 @@ const styles = StyleSheet.create({
   },
 
   content_perfil__data: {
-
     width: 220,
     height: "100%",
   },
 
   data__username: {
-
-    backgroundColor: "yellow",
+    // backgroundColor: "yellow",
     color: "white",
-    width: "100%",
-    fontSize: 22,
-    paddingLeft: 10,
+    width: "80%",
+    fontSize: 20,
+    paddingLeft: 5,
     paddingTop: 10,
-    paddingBottom: 5,
-
   },
 
   data__ocupation: {
     paddingLeft: 10,
     paddingBottom: 0,
     height: 25,
+  },
 
+  data__button_editar_perfil: {
+    width: "80%",
+    height: 50,
+    paddingLeft: 5,
   },
 
   container_submenu__infomation: {
-
-    backgroundColor: "green",
-    width: '90%',
-    height: 460,
+    // backgroundColor: "green",
+    width: '92%',
+    height: "auto",
     marginTop: 10,
   },
 
   container_submenu__exit: {
-
-    backgroundColor: "blue",
-    width: '90%',
-    height: 40,
-    marginTop: 10,
-    borderRadius: 10,
+    // backgroundColor: "blue",
+    width: '100%',
+    height: 100,
+    marginTop: 15,
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
   },
 
+  exit__text_exit: {
+    // backgroundColor: "blue",
+    width: '17%',
+    lineHeight: 35,
+    height: "50%",
+    fontSize: 22,
+    textAlign: "center",
+  },
+  
   exit__button_exit: {
-    height: "100%",
-  },
+    // backgroundColor: "blue",
+    width: '20%',
+    height: "50%",
+    fontSize: 35,
+    textAlign: "center",
 
+  },
 });
