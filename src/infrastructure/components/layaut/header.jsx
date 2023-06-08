@@ -1,5 +1,5 @@
 import React, {useRef, useState} from 'react';
-import { StyleSheet, Text, View, Button,  Alert, Pressable, DrawerLayoutAndroid, } from 'react-native';
+import { StyleSheet, Text, View, Button,  Alert, Pressable, DrawerLayoutAndroid, Image} from 'react-native';
 import Menu from '../../view/menu';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
@@ -18,7 +18,7 @@ export default function Header() {
       renderNavigationView={navigationView}
       >
       <View style={styles.container_header}>
-      {/* <Image source={{uri:'assets:/img/logos/sembrando_la_preciosa_semilla.gif'}} /> */}
+      <Image source={{uri:'assets:/img/logos/sembrando_la_preciosa_semilla.gif'}} />
       <Text style={styles.container_header__logo}>LOGO</Text>
       <View style={styles.container_nav}>
       <AntDesign style={styles.container_nav__button_open}
@@ -29,6 +29,7 @@ export default function Header() {
       </View>
     </View>
     </DrawerLayoutAndroid>
+    
   );
 }
 

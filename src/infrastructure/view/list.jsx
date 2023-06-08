@@ -1,7 +1,7 @@
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import ListParticipants from "../components/list-participants";
 
-export default function List() {
+const List = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
@@ -12,23 +12,18 @@ export default function List() {
       </View>
     <ScrollView>
         <View style={styles.list}>
-          <ListParticipants/>
-          <ListParticipants/>
-          <ListParticipants/>
-          <ListParticipants/>
-          <ListParticipants/>
-          <ListParticipants/>
-          <ListParticipants/>
-          <ListParticipants/>
-          <ListParticipants/>
-          <ListParticipants/>
-          <ListParticipants/>
-          <ListParticipants/>
+          <ListParticipants 
+          name = "César Navarro Venera"
+          onPress = { ()=> {
+            navigation.navigate('PerfilPartaker')
+          }}/>
       </View>
     </ScrollView>
     </View>
   );
 }
+
+export default List
 
 const styles = StyleSheet.create({
 

@@ -1,7 +1,9 @@
 import { StyleSheet, Text, View } from 'react-native';
 import CardReportHome from '../components/card-report-home';
+import List from './list';
+import PerfilPartaker from './Perfil-partaker';
 
-export default function Home() {
+export function Home({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.container_user}>
@@ -16,12 +18,13 @@ export default function Home() {
       </View>
 
       <View style={styles.container_data}>
-        <CardReportHome/>
-        <CardReportHome/>
-        <CardReportHome/>
-        <CardReportHome/>
-        <CardReportHome/>
-        <CardReportHome/>
+        <CardReportHome 
+          title = "actualizaciones"
+          description= "999"
+          onPress={ () => {
+            navigation.navigate('List')
+          }}  
+        />
       </View>
     </View>
     
