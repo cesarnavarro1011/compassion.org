@@ -1,3 +1,4 @@
+import * as Constants from 'expo-device';
 import { StyleSheet, Text, View } from 'react-native';
 import CardReportHome from '../components/card-report-home';
 import List from './list';
@@ -37,6 +38,7 @@ export function Home({ navigation }) {
       // backgroundColor: 'red',
       width: "100%",
       height: "100%",
+      marginTop: Constants.statusBarHeight,
     },
 
     container_user: {

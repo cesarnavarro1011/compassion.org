@@ -1,7 +1,7 @@
 import React, {useRef, useState} from 'react';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 import { StyleSheet, Text, View, Button,  Alert, Pressable, DrawerLayoutAndroid, Image} from 'react-native';
 import Menu from '../../view/menu';
-import AntDesign from 'react-native-vector-icons/AntDesign';
 
 export default function Header() {
   const drawer = useRef(null);
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   container_DrawerLayoutAndroid_close: {
     display: "flex",
     flexDirection: "row",
-    marginTop: 30,
+    marginTop: Constants.statusBarHeight,
   },
 
   container_header: {
