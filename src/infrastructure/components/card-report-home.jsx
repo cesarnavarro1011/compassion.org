@@ -1,15 +1,25 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
-export default function CardReportHome() {
-
+const CardReportHome = (props) => {
+  
+  const { onPress, title, description } = props 
   return (
-    <View style={styles.container}>
-      <Text style={styles.container__title}>TITLE</Text>
-      <Text style={styles.container__description}>999</Text>
-    </View>
+    <TouchableOpacity 
+      style = { styles.container }
+      onPress = { onPress }
+    >
+      <Text style = { styles.container__title }>
+        {title}
+      </Text>
+
+      <Text style = { styles.container__description}>
+        {description}
+      </Text>
+    </TouchableOpacity>
     
   );
 }
+export default CardReportHome
 
   const styles = StyleSheet.create({
 

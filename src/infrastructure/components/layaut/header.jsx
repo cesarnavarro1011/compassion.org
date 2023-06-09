@@ -1,7 +1,9 @@
 import React, {useRef, useState} from 'react';
-import { StyleSheet, Text, View, Button,  Alert, Pressable, DrawerLayoutAndroid, Image } from 'react-native';
+import { StyleSheet, Text, View, Button,  Alert, Pressable, DrawerLayoutAndroid, } from 'react-native';
 import Menu from '../../view/menu';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import { StyleSheet, Text, View, Button,  Alert, Pressable, DrawerLayoutAndroid, Image} from 'react-native';
+import Menu from '../../view/menu';
 
 export default function Header() {
   const drawer = useRef(null);
@@ -18,8 +20,8 @@ export default function Header() {
       renderNavigationView={navigationView}
       >
       <View style={styles.container_header}>
-      <Image style={styles.container_header__logo} source={{uri:'assets:/img/logos/sembrando_la_preciosa_semilla.gif'}} />
-      {/* <Text style={styles.container_header__logo}>LOGO</Text> */}
+      <Image source={{uri:'assets:/img/logos/sembrando_la_preciosa_semilla.gif'}} />
+      <Text style={styles.container_header__logo}>LOGO</Text>
       <View style={styles.container_nav}>
       <AntDesign style={styles.container_nav__button_open}
           title="Open"
@@ -29,6 +31,7 @@ export default function Header() {
       </View>
     </View>
     </DrawerLayoutAndroid>
+    
   );
 }
 
@@ -44,7 +47,7 @@ const styles = StyleSheet.create({
   container_DrawerLayoutAndroid_close: {
     display: "flex",
     flexDirection: "row",
-    marginTop: 30,
+    marginTop: Constants.statusBarHeight,
   },
   
   container_header: {

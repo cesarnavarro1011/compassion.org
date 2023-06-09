@@ -1,12 +1,15 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity } from "react-native";
 
-export default function ListParticipants(){ 
+export default function ListParticipants(props){ 
+    const { onPress, name } = props
 
   return (
-      <View style={styles.participants}>
+      <TouchableOpacity style={styles.participants}
+        onPress={ onPress }
+      >
         <Image style={styles.imgParticipants}/>
-        <Text style={styles.nameParticipants}>josé castro montero rojas</Text>
-    </View>
+        <Text style={styles.nameParticipants}>{name}</Text>
+    </TouchableOpacity>
   );
 }
 

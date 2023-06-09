@@ -38,7 +38,6 @@ export default function Menu({drawer}) {
             <MenuOpcions/>
             <MenuOpcions/>
         </View>
-
         <View style={styles.container_submenu__exit}>
         <Text style={styles.exit__text_exit}>Salir</Text>
           <Ionicons style={styles.exit__button_exit} 
