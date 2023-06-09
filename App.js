@@ -9,24 +9,60 @@ import List from "./src/infrastructure/view/list";
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { StatusBar } from 'expo-status-bar';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
+const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 function MyStack() {
   return (
     <Stack.Navigator
-    initialRouteName='Home'
+    initialRouteName='home'
     >
       <Stack.Screen 
         name="Home" component={Home}
       />
-      <Stack.Screen name="PerfilPartaker" component={PerfilPartaker} />
-      <Stack.Screen name="List" component={List}/>
+      <Stack.Screen 
+        name="PerfilPartaker" 
+        component={PerfilPartaker}
+      />
+      <Stack.Screen 
+        name="List" 
+        component={List}
+      />
       {/* <Stack.Screen name="Profile" component={Profile} /> */}
     </Stack.Navigator>
   );
 } 
+
+function MyDrawer() {
+  return (
+    <Drawer.Navigator>
+        <Drawer.Screen 
+        name="Home" 
+        component={Home}
+      />
+      <Drawer.Screen 
+        name="Actualizaciones" 
+        component={List}
+      />
+      <Drawer.Screen 
+        name="CDPR" 
+        component={List}
+      />
+      <Drawer.Screen 
+        name="Antropometria" 
+        component={List}
+      />
+        <Drawer.Screen 
+        name="menu" 
+        component={Menu}
+      />
+    </Drawer.Navigator>
+  );
+}
 
 export default function App() {
   return (
@@ -35,7 +71,7 @@ export default function App() {
       <Tab.Navigator>
         <Tab.Screen 
           name = "Home" 
-          component = {MyStack} 
+          component = {MyDrawer} 
           options = {{ headerShown: false }}
         />
         <Tab.Screen 
@@ -43,9 +79,10 @@ export default function App() {
           component = {PerfilPartaker}
         />
         <Tab.Screen 
-          name = "settings" 
+          name = "Settings" 
           component = {""}
         />
+
       </Tab.Navigator>  
     </NavigationContainer>
   );

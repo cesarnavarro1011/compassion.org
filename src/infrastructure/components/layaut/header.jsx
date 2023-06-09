@@ -2,8 +2,7 @@ import React, {useRef, useState} from 'react';
 import { StyleSheet, Text, View, Button,  Alert, Pressable, DrawerLayoutAndroid, } from 'react-native';
 import Menu from '../../view/menu';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import { StyleSheet, Text, View, Button,  Alert, Pressable, DrawerLayoutAndroid, Image} from 'react-native';
-import Menu from '../../view/menu';
+import * as Constants from 'expo-device';
 
 export default function Header() {
   const drawer = useRef(null);

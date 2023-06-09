@@ -23,7 +23,7 @@ export function Home({ navigation }) {
           title = "actualizaciones"
           description= "999"
           onPress={ () => {
-            navigation.navigate('List')
+            navigation.navigate('PerfilPartaker')
           }}  
         />
       </View>
