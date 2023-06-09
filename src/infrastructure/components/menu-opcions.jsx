@@ -1,15 +1,14 @@
 import { View, StyleSheet, Text } from "react-native";
 
-export default function MenuOpcions() {
+export default function MenuOpcions({name}) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>name</Text>
+      <Text style={styles.title}>{name}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-
   container: {
     backgroundColor: "#36A4C6",
     width: '100%',

@@ -37,7 +37,6 @@ export default function Menu({drawer}) {
             <MenuOpcions/>
             <MenuOpcions/>
             <MenuOpcions/>
-            <MenuOpcions/>
         </View>
 
         <View style={styles.container_submenu__exit}>

@@ -1,5 +1,5 @@
 import React, {useRef, useState} from 'react';
-import { StyleSheet, Text, View, Button,  Alert, Pressable, DrawerLayoutAndroid, } from 'react-native';
+import { StyleSheet, Text, View, Button,  Alert, Pressable, DrawerLayoutAndroid, Image } from 'react-native';
 import Menu from '../../view/menu';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
@@ -18,8 +18,8 @@ export default function Header() {
       renderNavigationView={navigationView}
       >
       <View style={styles.container_header}>
-      {/* <Image source={{uri:'assets:/img/logos/sembrando_la_preciosa_semilla.gif'}} /> */}
-      <Text style={styles.container_header__logo}>LOGO</Text>
+      <Image style={styles.container_header__logo} source={{uri:'assets:/img/logos/sembrando_la_preciosa_semilla.gif'}} />
+      {/* <Text style={styles.container_header__logo}>LOGO</Text> */}
       <View style={styles.container_nav}>
       <AntDesign style={styles.container_nav__button_open}
           title="Open"
@@ -40,18 +40,21 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
   },
-
+  
   container_DrawerLayoutAndroid_close: {
     display: "flex",
     flexDirection: "row",
     marginTop: 30,
   },
-
+  
   container_header: {
+    width: "100%",
     height: 70,
+    display: "flex",
     flexDirection: "row",
     alignItems: "center",
     marginTop:30,
+    justifyContent: "space-between",
   },
 
   container_nav: {
@@ -59,6 +62,7 @@ const styles = StyleSheet.create({
   },
   
   container_nav__button_open: {
+    width: "100%",
     fontSize: 40,
     justifyContent: "center",
   },
@@ -66,6 +70,7 @@ const styles = StyleSheet.create({
   container_header__logo: {
     backgroundColor: 'green',
     width: "84%",
+    height: 60,
     lineHeight: 70,
     paddingLeft: 20,
   },
