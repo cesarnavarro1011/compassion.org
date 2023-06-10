@@ -5,23 +5,15 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import * as Constants from 'expo-device';
 
 export default function Header() {
-  const drawer = useRef(null);
-
-  const navigationView = () => (
-    <Menu drawer={drawer}/>
-  );
-  
   return (
-    <DrawerLayoutAndroid style={styles.container_DrawerLayoutAndroid_open}
-      ref={drawer}
-      drawerWidth={300}
-      drawerPosition= "right"
-      renderNavigationView={navigationView}
-      >
-      <View style={styles.container_header}>
-      <Image source={{uri:'assets:/img/logos/sembrando_la_preciosa_semilla.gif'}} />
-      <Text style={styles.container_header__logo}>LOGO</Text>
-      <View style={styles.container_nav}>
+    <View style={styles.container_header}>
+      <View style={styles.container_group_header}>
+          <Image style={styles.container_header__logo} source={{uri:'assets:/img/logos/sembrando_la_preciosa_semilla.gif'}} />
+      </View>
+      <View style={styles.container_group_header}>
+        <Text style={styles.container_header__title}>LOGO</Text>
+      </View>
+      <View style={styles.container_group_header}>
       <AntDesign style={styles.container_nav__button_open}
           title="Open"
           name="menuunfold"
@@ -29,8 +21,6 @@ export default function Header() {
         />
       </View>
     </View>
-    </DrawerLayoutAndroid>
-    
   );
 }
 
