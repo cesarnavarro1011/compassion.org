@@ -1,12 +1,19 @@
-import * as Constants from 'expo-device';
+// import * as Constants from 'expo-device';
 import { StyleSheet, Text, View } from 'react-native';
 import CardReportHome from '../components/card-report-home';
 import List from './list';
 import PerfilPartaker from './Perfil-partaker';
+import Header from '../components/layaut/header';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-export function Home({ navigation }) {
+export default function Home({ navigation }) {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
+      <Header 
+        title="" 
+        isBack={true} 
+        navigation={navigation}  
+      />
       <View style={styles.container_user}>
         <Text  style={styles.container_user__text}>Bienvenido Tutor "User"</Text>
       </View>
@@ -23,11 +30,11 @@ export function Home({ navigation }) {
           title = "actualizaciones"
           description= "999"
           onPress={ () => {
-            navigation.navigate('PerfilPartaker')
+            navigation.navigate('List')
           }}  
         />
       </View>
-    </View>
+    </SafeAreaView>
     
   );
 }
@@ -38,11 +45,11 @@ export function Home({ navigation }) {
       // backgroundColor: 'red',
       width: "100%",
       height: "100%",
-      marginTop: Constants.statusBarHeight,
+      // marginTop: Constants.statusBarHeight,
     },
 
     container_user: {
-      backgroundColor: 'blue',
+      // backgroundColor: 'blue',
       width: "100%",
       height: 60,
       display: 'flex',
@@ -50,6 +57,7 @@ export function Home({ navigation }) {
     },
 
     container_user__text: {
+      color: '#003554',
       marginLeft: 20,
       fontSize: 18,
     },
@@ -73,6 +81,7 @@ export function Home({ navigation }) {
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-around',
+      alignContent: 'center',
       flexWrap: "wrap", 
     },
   });

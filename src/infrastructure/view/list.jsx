@@ -1,25 +1,28 @@
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import ListParticipants from "../components/list-participants";
+import { SafeAreaView } from "react-native-safe-area-context";
+import Header from "../components/layaut/header";
 
 const List = ({ navigation }) => {
 
   return (
-    <View style={styles.container}>
-        <View style={styles.posts}>
+    <SafeAreaView style={styles.container}>
+    <Header title="listado" />
+      <View style={styles.posts}>
       </View>
-        <View style={styles.item}>
-          <Text style={styles.title}>name of item</Text>
+      <View style={styles.item}>
+        <Text style={styles.title}>name of item</Text>
       </View>
-    <ScrollView>
+      <ScrollView>
         <View style={styles.list}>
           <ListParticipants 
           name = "César Navarro Venera"
           onPress = { ()=> {
             navigation.navigate('PerfilPartaker')
           }}/>
-      </View>
-    </ScrollView>
-    </View>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
@@ -35,21 +38,22 @@ const styles = StyleSheet.create({
   },
 
   posts: {
+    backgroundColor: "#00A6FB",         
     width: '100%',
     height: 120,
-    backgroundColor: "red",
     
   },
 
   item: {
+    backgroundColor: "#00A6FB",
     height: 60,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "blue",
   },
 
   title: {
+    color: "white",
     fontSize: 23,
     fontWeight: "bold",
   },
