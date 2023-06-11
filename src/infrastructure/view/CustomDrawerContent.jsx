@@ -100,8 +100,6 @@ const styles = StyleSheet.create({
     color: "white",
     fontWeight: "bold",
     width: "100%",
-    borderBottom: 10,
-    borderColor: "black",
     fontSize: 20,
     paddingLeft: 5,
     paddingTop: 10,

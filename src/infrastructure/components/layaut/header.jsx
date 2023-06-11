@@ -77,7 +77,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     width: "auto",
     height: "100%",
-    borderColor: 'red',
   },
 
   container_header__logo: {
@@ -86,7 +85,6 @@ const styles = StyleSheet.create({
     height: "100%",
     // lineHeight: 70,
     paddingLeft: 20,
-    borderColor: 'red',
   },
 
   container_nav__button_back: {
@@ -105,7 +103,6 @@ const styles = StyleSheet.create({
     width: "100%",
     fontSize: 40,
     textAlign: "right",
-    borderColor: 'red',
   },
 
   empty: {

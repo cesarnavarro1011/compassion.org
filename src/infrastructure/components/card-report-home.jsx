@@ -1,7 +1,6 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 const CardReportHome = (props) => {
-  
   const { onPress, title, description } = props 
   return (
     <TouchableOpacity 

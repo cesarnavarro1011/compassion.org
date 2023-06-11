@@ -27,7 +27,7 @@ function HomeStack() {
 
   return (
     <Stack.Navigator
-    initialRouteName='Home'
+    initialRouteName='home'
     >
       <Stack.Screen 
         name="Home"
@@ -72,7 +72,7 @@ function TabNavegation() {
       }}
     >
       <Tab.Screen 
-        name = "Home" 
+        name = "homeStack" 
         component = {HomeStack} 
         options = {{ 
           tabBarLabel: "Inicio",
@@ -83,7 +83,7 @@ function TabNavegation() {
         }}
       />  
       <Tab.Screen 
-        name = "perfil" 
+        name = "PerfilStack" 
         component = {PerfilStack}
         options={{
           headerShown: false,
@@ -113,7 +113,7 @@ export default function App () {
     <NavigationContainer>
       <StatusBar style="auto"/>
         <Drawer.Navigator 
-          initialRouteName='Menu'
+          initialRouteName='menu'
           drawerContent={props => CustomDrawerContent(props)}
           >
           <Drawer.Screen 

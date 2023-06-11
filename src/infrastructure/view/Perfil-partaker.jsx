@@ -3,7 +3,7 @@ import CardReportPerfil from "../components/card-report-perfil";
 import Header from "../components/layaut/header";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-export default function PerfilPartaker({ navigation }) {
+export default function PerfilPartaker() {
     return (
         <SafeAreaView style={styles.container__scroll}>
         <Header title="perfil participante"/>
