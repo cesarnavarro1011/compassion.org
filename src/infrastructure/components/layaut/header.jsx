@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   container_header: {
     backgroundColor: '#00A6FB',
     // opacity: 0.5,
-    blurRadius: 1,
+    // blurRadius: 1,
     width: "100%",
     height: 60,
     display: "flex",

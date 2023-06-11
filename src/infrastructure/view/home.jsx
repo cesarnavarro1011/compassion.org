@@ -82,6 +82,6 @@ export default function Home({ navigation }) {
       flexDirection: 'row',
       justifyContent: 'space-around',
       alignContent: 'center',
-      flexWrap: "wrap", 
+      // flexWrap: "wrap", ad
     },
   });
