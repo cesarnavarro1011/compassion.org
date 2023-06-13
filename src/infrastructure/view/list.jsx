@@ -6,7 +6,7 @@ import Header from "../components/layaut/header";
 const List = ({ navigation }) => {
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
     <Header title="listado" />
       <View style={styles.posts}>
       </View>
@@ -22,7 +22,7 @@ const List = ({ navigation }) => {
           }}/>
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 }
 

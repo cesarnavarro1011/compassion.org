@@ -8,7 +8,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function Home({ navigation }) {
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <Header 
         title="" 
         isBack={true} 
@@ -34,7 +34,7 @@ export default function Home({ navigation }) {
           }}  
         />
       </View>
-    </SafeAreaView>
+    </View>
     
   );
 }

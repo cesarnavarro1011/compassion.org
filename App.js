@@ -114,6 +114,9 @@ export default function App() {
         <Drawer.Navigator 
           initialRouteName='Menu'
           drawerContent={props => CustomDrawerContent(props)}
+          screenOptions={{
+            drawerPosition: "right",
+          }}
           >
           <Drawer.Screen 
             name="Menu" 

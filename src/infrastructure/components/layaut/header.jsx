@@ -48,13 +48,13 @@ const styles = StyleSheet.create({
     // opacity: 0.5,
     // blurRadius: 1,
     width: "100%",
-    height: 60,
+    height: 85,
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
     // marginTop: Constants.statusBarHeight,
-    // marginTop: 30,
+    paddingTop: 20,
   },
 
   subcontainer_header: {
