@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, Image, } from "react-native";
 
 export default function ListParticipants(props){ 
     const { onPress, name } = props
@@ -7,7 +7,7 @@ export default function ListParticipants(props){
       <TouchableOpacity style={styles.participants}
         onPress={ onPress }
       >
-        <Image style={styles.imgParticipants}/>
+        <Image style={styles.imgParticipants} source={require('../../../assets/img/imageDefaut.png')}/>
         <Text style={styles.nameParticipants}>{name}</Text>
     </TouchableOpacity>
   );
@@ -42,6 +42,6 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     lineHeight: 44,
-    paddingLeft: 25,
+    paddingLeft: 15,
   },
 })

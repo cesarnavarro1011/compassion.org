@@ -11,7 +11,7 @@ export default function Header({title, isBack, navigation }) {
       {
         isBack ? 
           <View style={styles.container_group_header}>
-              {/* <Image style={styles.container_header__logo} source={{uri: 'asset:/img/logos/sembrando_la_preciosa_semilla.jpg'}} /> */}
+              <Image style={styles.container_header__logo} source={require('../../../../assets/img/logos/sembrando_la_preciosa_semilla.png')} />
           </View>
         : 
         <Ionicons style={styles.container_nav__button_back}
@@ -80,10 +80,11 @@ const styles = StyleSheet.create({
 
   container_header__logo: {
     // backgroundColor: 'green',
-    width: "100%",
-    height: "100%",
+    width: 45,
+    height: 45,
     // lineHeight: 70,
     paddingLeft: 20,
+    zIndex: 100,
   },
 
   container_nav__button_back: {

@@ -16,7 +16,7 @@ const List = ({ navigation }) => {
       <ScrollView>
         <View style={styles.list}>
           <ListParticipants 
-          name = "César Navarro Venera"
+          name = "Jhoana marcela benitez pertuz"
           onPress = { ()=> {
             navigation.navigate('PerfilPartaker')
           }}/>
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     paddingTop: 20,
-    paddingLeft: 5,
+    paddingLeft: 2,
   },
 
 })

@@ -1,5 +1,4 @@
-import { View, StyleSheet } from "react-native";
-import { Button, Text, ScrollView } from "react-native";
+import { StyleSheet, Image, View, Button, Text, ScrollView} from "react-native";
 import MenuOpcions from "../components/menu-opcions";
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -8,11 +7,16 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
 export default function CustomDrawerContent({ navigation }) {
+
+  // var icon = this.props.active
+  // ? require('')
+  // : require('../../../assets/img/imageDefaut.png');
+
   return (
     <View style={styles.container_menu}>
       <View style={styles.container_submenu}>
         <View style={styles.container_submenu__content_perfil}>
-          <View style={styles.content_perfil__perfil}></View>
+          <Image style={styles.content_perfil__perfil} source={require('../../../assets/img/imageDefaut.png')}/>
           <View style={styles.content_perfil__data}>
             <Text style={styles.data__username}>César Navarro</Text>
             <Text style={styles.data__ocupation}>ocupatión</Text>
@@ -68,7 +72,7 @@ const styles = StyleSheet.create({
   },
 
   container_submenu__content_perfil: {
-    backgroundColor: "#00A6FB",
+    backgroundColor: "#00A1FB",
     width: '100%',
     height: 270,
     paddingTop: 40,
@@ -81,10 +85,11 @@ const styles = StyleSheet.create({
   },
 
   content_perfil__perfil: {
-    backgroundColor: "yellow",
+    // backgroundColor: "yellow",
     width: 150,
     height: 150,
     borderRadius: 100,
+    zIndex: 100,
   },
 
   content_perfil__data: {

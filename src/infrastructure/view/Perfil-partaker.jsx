@@ -1,4 +1,4 @@
-import {  View , Text, StyleSheet, ScrollView  } from "react-native";
+import { StyleSheet, ScrollView, Image, View , Text,   } from "react-native";
 import CardReportPerfil from "../components/card-report-perfil";
 import Header from "../components/layaut/header";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -9,12 +9,11 @@ export default function PerfilPartaker() {
         <Header title="perfil participante"/>
             <ScrollView style={styles.container__perfilPartaker}>
                 <View style={styles.container_perfilPartaker__coverImage}>
-                    <View style={styles.container_perfilPartaker__perfil}>
-                    </View> 
+                    <Image style={styles.container_perfilPartaker__perfil} source={require('../../../assets/img/imageDefaut.png')}/>
                 </View>
                 <View style={styles.container__data}>
                     <View style={styles.container_data__group}>
-                        <Text style={styles.container_data__name}>Merlys Jhoana De La Hoz Lazo</Text>
+                        <Text style={styles.container_data__name}>Jhoana marcela benitez pertuz</Text>
                         <View style={styles.container_data__details}>
                             <Text style={styles.container_data_details__information}>Información</Text>
                             <Text style={styles.container_data_details__title}>ID</Text>
@@ -94,19 +93,19 @@ const styles = StyleSheet.create({
 
     container_data__group: {
         // backgroundColor: "red",
-        marginTop: 40,
+        marginTop: 30,
     },
 
     container_data__name: {
-        fontSize: 23,
-        height: 55,
-        marginBottom: 10,
+        fontSize: 24,
+        height: 60,
+        marginBottom: 20,
         textAlign: "center",
         fontWeight: "bold",
     },
 
     container_data_details__information: {
-        backgroundColor: "#00A6FB",
+        backgroundColor: "#0582CA",
         color: "#FFFFFF",
         fontSize: 22,
         height: 47,
@@ -135,7 +134,7 @@ const styles = StyleSheet.create({
     },
 
     container_data_report__reports: {
-        backgroundColor: "#00A6FB",
+        backgroundColor: "#0582CA",
         color: "#FFFFFF",
         fontSize: 22,
         height: 47,

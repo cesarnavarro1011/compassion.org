@@ -49,14 +49,15 @@ export default function Home({ navigation }) {
     },
 
     container_user: {
-      // backgroundColor: 'blue',
+      backgroundColor: 'white',
       width: "100%",
-      height: 60,
+      height: 31,
       display: 'flex',
       justifyContent: 'center',
     },
 
     container_user__text: {
+      
       color: '#003554',
       marginLeft: 20,
       fontSize: 18,
