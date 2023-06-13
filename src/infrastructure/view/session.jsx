@@ -15,7 +15,7 @@ export default function Session() {
             </View>
             <View style={styles.content_session__form}>
              <Text style={styles.content_session_form__txt}>Password</Text>
-             <TextInput style={styles.content_session_form__input}  secureTextEntry={true} style={styles.default}  />
+             <TextInput secureTextEntry={true} style={styles.default} />
             </View> 
           </View>
         </View>

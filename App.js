@@ -127,7 +127,7 @@ export default function App() {
             name="Menu" 
             component={TabNavigation}
             options = {headerShown}
-          />
+            />
         </Drawer.Navigator>
     </NavigationContainer>
   );
