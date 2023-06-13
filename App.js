@@ -14,6 +14,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { StatusBar } from 'expo-status-bar';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { AntDesign, Ionicons } from '@expo/vector-icons';
+import Session from './src/infrastructure/view/session';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -56,7 +57,8 @@ function PerfilStack() {
       <Stack.Screen 
         name="PerfilPartaker" 
         component={PerfilPartaker}
-        options = {headerShown}
+        options = {{headerShown,
+      }}
       />
       {/* <Stack.Screen name="Profile" component={Profile} /> */}
     </Stack.Navigator>
@@ -79,6 +81,7 @@ function TabNavigation() {
           tabBarIcon: ({color, size}) => (
             <AntDesign name='home' color={color} size={size}/>
           ),
+          tabBarBadge: 3,
         }}
       />  
       <Tab.Screen 
@@ -90,17 +93,19 @@ function TabNavigation() {
           tabBarIcon: ({color, size}) => (
             <Ionicons name='ios-person-outline' color={color} size={size}/>
           ),
+          // tabBarBadge: 0
         }}
       />
       <Tab.Screen 
         name = "Settings" 
-        component = {CustomDrawerContent}
+        component = {Session}
         options = {{
           headerShown: false,
           tabBarLabel: "Settings",
           tabBarIcon: ({color, size}) => (
             <Ionicons name='md-settings-outline' color={color} size={size}/>
           ),
+          tabBarBadge: 1,
         }}
       />
     </Tab.Navigator> 
