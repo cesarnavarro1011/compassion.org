@@ -16,7 +16,7 @@ export default function ListParticipants(props){
 const styles = StyleSheet.create({
 
   participants: {
-    backgroundColor: "red",
+    backgroundColor: "#00A6FB",
     width: "100%",
     height: 70,
     display: 'flex',
@@ -26,18 +26,18 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     marginBottom: 10,
     textAlign: "center",
-    borderRadius: 12,
   },
 
   imgParticipants: {
+    backgroundColor: "#0582CA",
     width: 50,
     height: 50,
     borderRadius: 25,
-    backgroundColor: "blue",
 
   },
 
   nameParticipants: {
+    color: "white",
     fontSize: 18,
     width: '100%',
     height: '100%',

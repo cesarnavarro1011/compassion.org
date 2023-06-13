@@ -1,10 +1,13 @@
 import {  View , Text, StyleSheet, ScrollView  } from "react-native";
 import CardReportPerfil from "../components/card-report-perfil";
+import Header from "../components/layaut/header";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function PerfilPartaker() {
     return (
-        <ScrollView style={styles.container__scroll}>
-            <View style={styles.container__perfilPartaker}>
+        <SafeAreaView style={styles.container__scroll}>
+        <Header title="perfil participante"/>
+            <ScrollView style={styles.container__perfilPartaker}>
                 <View style={styles.container_perfilPartaker__coverImage}>
                     <View style={styles.container_perfilPartaker__perfil}>
                     </View> 
@@ -40,30 +43,30 @@ export default function PerfilPartaker() {
                                 <CardReportPerfil/>
                             </View>
                         </View>
-
                         <View style={styles.container_data__comunication}>
                         </View>
                     </View>
                 </View> 
-            </View>
-        </ScrollView>
+            </ScrollView>
+        </SafeAreaView>
     );
 }
 
 const styles = StyleSheet.create({
 
     container__scroll: {
-        backgroundColor: 'pink',
+        // backgroundColor: 'pink',
+        height: "100%",
     },
 
     container__perfilPartaker: {
-        backgroundColor: "red",
+        // backgroundColor: "#00A6FB",
         width: "100%",
-        height: "auto",
     },
 
     container_perfilPartaker__coverImage: {
-        backgroundColor: "yellow",
+        // backgroundColor: "#fffaf0",
+        backgroundColor: "#00A6FB",
         width: "100%",
         height: 190,
         display: "flex",
@@ -73,7 +76,7 @@ const styles = StyleSheet.create({
     },
 
     container_perfilPartaker__perfil: {
-        backgroundColor: "blue",
+        backgroundColor: "#0582CA",
         width: 150,
         height: 150,
         borderRadius: 100,
@@ -85,7 +88,7 @@ const styles = StyleSheet.create({
     container__data: {
         backgroundColor: "#fffaf0",
         width: "100%",
-        height: "auto",
+        height: "100%",
         padding: 20,
     },
 
@@ -103,7 +106,8 @@ const styles = StyleSheet.create({
     },
 
     container_data_details__information: {
-        backgroundColor: "#2f4f4f",
+        backgroundColor: "#00A6FB",
+        color: "#FFFFFF",
         fontSize: 22,
         height: 47,
         lineHeight: 47,
@@ -131,7 +135,8 @@ const styles = StyleSheet.create({
     },
 
     container_data_report__reports: {
-        backgroundColor: "#2f4f4f",
+        backgroundColor: "#00A6FB",
+        color: "#FFFFFF",
         fontSize: 22,
         height: 47,
         lineHeight: 47,
@@ -151,5 +156,6 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         flexWrap: "wrap",
         paddingTop: 0,
+        marginBottom: 50,
     },
 })

@@ -1,27 +1,32 @@
 import { View, StyleSheet, Text } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
-export default function MenuOpcions({name}) {
+export default function MenuOpcions({ nameText }) {
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{name}</Text>
+        <Text style={styles.title}>{nameText}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#36A4C6",
-    width: '100%',
-    height: 73,
-    borderRadius: 5,
-    marginTop: 5,
+    backgroundColor: "#00A6FB",
+    width: '90%',
+    height: "100%",
+    height: 70,
     paddingTop: 22,
-    paddingLeft: 15,
+    paddingLeft: 10,
+    display: "flex",
+    flexDirection: "row",
+    alignContent: "center",
   },
 
   title: {
+    width: 100,
+    height: "100%",
     color: "white",
-    fontSize: 20,
+    fontSize: 15,
   },
-
 })

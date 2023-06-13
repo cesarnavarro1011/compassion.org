@@ -12,15 +12,16 @@ export default function CardReportPerfil() {
 const styles = StyleSheet.create({
 
     container_data_card_report__details: {
-        backgroundColor: "red",
+        backgroundColor: "#0582CA",
         width: "100%",
         height: 85,
-        marginBottom: 5,
+        marginBottom: "1%",
         borderRadius: 5,
     },
 
     container_data_card_report__details_title: {
         // backgroundColor: "green", 
+        color: "#FFFFFF",
         fontFamily: "",
         textAlign: "center",
         width: "100%",
@@ -32,6 +33,7 @@ const styles = StyleSheet.create({
 
     container_data_card_report__details_status: {
         // backgroundColor: "yellow", 
+        color: "#FFFFFF",
         width: "100%",
         height: 50,
         lineHeight: 40,

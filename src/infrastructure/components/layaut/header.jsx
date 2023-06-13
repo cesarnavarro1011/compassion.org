@@ -1,83 +1,121 @@
-import React, {useRef, useState} from 'react';
-import { StyleSheet, Text, View, Button,  Alert, Pressable, DrawerLayoutAndroid, } from 'react-native';
-import Menu from '../../view/menu';
+import { StyleSheet, Text, View, Image } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import * as Constants from 'expo-device';
+import { Ionicons } from '@expo/vector-icons';
 
-export default function Header() {
-  const drawer = useRef(null);
+export default function Header({title, isBack, navigation }) {
 
-  const navigationView = () => (
-    <Menu drawer={drawer}/>
-  );
-  
   return (
-    <DrawerLayoutAndroid style={styles.container_DrawerLayoutAndroid_open}
-      ref={drawer}
-      drawerWidth={300}
-      drawerPosition= "right"
-      renderNavigationView={navigationView}
-      >
-      <View style={styles.container_header}>
-      <Image source={{uri:'assets:/img/logos/sembrando_la_preciosa_semilla.gif'}} />
-      <Text style={styles.container_header__logo}>LOGO</Text>
-      <View style={styles.container_nav}>
-      <AntDesign style={styles.container_nav__button_open}
-          title="Open"
-          name="menuunfold"
-          onPress={() => drawer.current?.openDrawer()}
+    <View style={styles.container_header}>
+      <View style={styles.subcontainer_header}> 
+      {
+        isBack ? 
+          <View style={styles.container_group_header}>
+              {/* <Image style={styles.container_header__logo} source={{uri: 'asset:/img/logos/sembrando_la_preciosa_semilla.jpg'}} /> */}
+          </View>
+        : 
+        <Ionicons style={styles.container_nav__button_back}
+          title = "Open"
+          name = "md-chevron-back"
+          // onPress = {navigation.goBack()}
         />
+      } 
+          <View style={styles.container_group_header}>
+            <Text style={styles.container_header__title}>{title}</Text>
+          </View>
+      {
+        isBack ?   
+          <View style={styles.container_group_header}>
+          <Ionicons style={styles.container_nav__button_open}
+              title="Open"
+              color="white"
+              name="menu-outline"
+              onPress={() => navigation.openDrawer()}
+            />
+          </View> 
+        : 
+        <View style={styles.empty}></View>
+      }      
       </View>
     </View>
-    </DrawerLayoutAndroid>
-    
   );
 }
 
 const styles = StyleSheet.create({
 
-  container_DrawerLayoutAndroid_open: {
-    backgroundColor: 'steelblue',
-    width: "100%",
-    display: "flex",
-    flexDirection: "row",
-  },
-  
-  container_DrawerLayoutAndroid_close: {
-    display: "flex",
-    flexDirection: "row",
-    marginTop: Constants.statusBarHeight,
-  },
-  
   container_header: {
+    backgroundColor: '#00A6FB',
+    // opacity: 0.5,
+    // blurRadius: 1,
     width: "100%",
-    height: 70,
+    height: 60,
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    // marginTop: Constants.statusBarHeight,
+    // marginTop: 30,
+  },
+
+  subcontainer_header: {
+    // backgroundColor: 'blue',
+    width: "90%",
+    height: "100%",
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    marginTop:30,
     justifyContent: "space-between",
-  },
-
-  container_nav: {
-    width: "100%",
+    marginLeft: "auto",
+    marginRight: "auto",
   },
   
-  container_nav__button_open: {
-    width: "100%",
-    fontSize: 40,
+  container_group_header: {
+    // backgroundColor: 'yellow',
+    display: "flex",
+    alignItems: "center",
     justifyContent: "center",
+    width: "auto",
+    height: "100%",
   },
 
   container_header__logo: {
-    backgroundColor: 'green',
-    width: "84%",
-    height: 60,
+    // backgroundColor: 'green',
+    width: "100%",
+    height: "100%",
+    // lineHeight: 70,
+    paddingLeft: 20,
+  },
+
+  container_nav__button_back: {
+    fontSize: 35,
+  },
+
+  container_header__title: {
+    color: "#FFFFFF",
+    width: "100%",
+    height: "100%",
     lineHeight: 70,
     paddingLeft: 20,
   },
 
+  container_nav__button_open: {
+    width: "100%",
+    fontSize: 40,
+    textAlign: "right",
+  },
+
+  empty: {
+    width: "10%",
+  },
+
+  container_header__title: {
+    width: "100%",
+    fontSize: 18,
+    textAlign: "center",
+  },
+
   text: {
+    width: "100%",
     fontSize: 16,
     lineHeight: 21,
     fontWeight: 'bold',
