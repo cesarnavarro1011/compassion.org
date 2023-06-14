@@ -16,54 +16,52 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { AntDesign, Ionicons } from '@expo/vector-icons';
 import Session from './src/infrastructure/view/session';
 
-const Drawer = createDrawerNavigator();
-const Stack = createStackNavigator();
-const Tab = createBottomTabNavigator();
-
 const  headerShown = () => ({
   headerShown: false
 })
+const StackHome = createStackNavigator();
 
 function HomeStack() {
 
   return (
-    <Stack.Navigator
+    <StackHome.Navigator
     initialRouteName='Home'
     >
-      <Stack.Screen 
+      <StackHome.Screen 
         name="Home"
         component={Home}
         options = {headerShown}
       />
-      <Stack.Screen 
+      <StackHome.Screen 
         name="List"
         component={List}
         options = {headerShown}
       />
-      <Stack.Screen 
+      <StackHome.Screen 
         name="PerfilPartaker" 
         component={PerfilPartaker}
         options = {headerShown}
       />
-    </Stack.Navigator>
+    </StackHome.Navigator>
   );
 } 
+const StackPerfil = createStackNavigator();
 
 function PerfilStack() {
   return (
-    <Stack.Navigator
+    <StackPerfil.Navigator
     initialRouteName='perfil'
     >
-      <Stack.Screen 
+      <StackPerfil.Screen 
         name="PerfilPartaker" 
         component={PerfilPartaker}
-        options = {{headerShown,
-      }}
+        options = {headerShown}
       />
-      {/* <Stack.Screen name="Profile" component={Profile} /> */}
-    </Stack.Navigator>
+      {/* <StackPerfil.Screen name="Profile" component={Profile} /> */}
+    </StackPerfil.Navigator>
   );
 } 
+const Tab = createBottomTabNavigator();
 
 function TabNavigation() {
   return (
@@ -111,24 +109,25 @@ function TabNavigation() {
     </Tab.Navigator> 
   )
 }
+const Drawer = createDrawerNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <StatusBar style="auto"/>
-        <Drawer.Navigator 
-          initialRouteName='Menu'
-          drawerContent={props => CustomDrawerContent(props)}
-          screenOptions={{
-            drawerPosition: "right",
-          }}
-          >
-          <Drawer.Screen 
-            name="Menu" 
-            component={TabNavigation}
-            options = {headerShown}
-            />
-        </Drawer.Navigator>
+        <StatusBar style="auto"/>
+          <Drawer.Navigator 
+            initialRouteName='Menu'
+            drawerContent={props => CustomDrawerContent(props)}
+            screenOptions={{
+              drawerPosition: "right",
+            }}
+            >
+            <Drawer.Screen 
+              name="Menu" 
+              component={TabNavigation}
+              options = {headerShown}
+              />
+          </Drawer.Navigator>
     </NavigationContainer>
   );
 }
