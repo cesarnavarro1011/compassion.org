@@ -17,7 +17,7 @@ const List = ({ navigation }) => {
         <View style={styles.list}>
           <ListParticipants 
           name = "Jhoana marcela benitez pertuz"
-          onPress = { ()=> {
+          onPress = {()=> {
             navigation.navigate('PerfilPartaker')
           }}/>
         </View>

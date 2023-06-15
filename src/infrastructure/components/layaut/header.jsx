@@ -17,7 +17,7 @@ export default function Header({title, isBack, navigation }) {
         <Ionicons style={styles.container_nav__button_back}
           title = "Open"
           name = "md-chevron-back"
-          // onPress = {navigation.goBack()}
+          onPress={navigation.goBack} 
         />
       } 
           <View style={styles.container_group_header}>

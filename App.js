@@ -25,7 +25,7 @@ function HomeStack() {
 
   return (
     <StackHome.Navigator
-    initialRouteName='Home'
+      initialRouteName='Home'
     >
       <StackHome.Screen 
         name="Home"
@@ -49,9 +49,7 @@ const StackPerfil = createStackNavigator();
 
 function PerfilStack() {
   return (
-    <StackPerfil.Navigator
-    initialRouteName='perfil'
-    >
+    <StackPerfil.Navigator>
       <StackPerfil.Screen 
         name="PerfilPartaker" 
         component={PerfilPartaker}
@@ -96,7 +94,7 @@ function TabNavigation() {
       />
       <Tab.Screen 
         name = "Settings" 
-        component = {Session}
+        component = {null}
         options = {{
           headerShown: false,
           tabBarLabel: "Settings",
@@ -111,23 +109,44 @@ function TabNavigation() {
 }
 const Drawer = createDrawerNavigator();
 
+function DrawerNavigator() {
+  return (
+    <Drawer.Navigator 
+      drawerContent={props => CustomDrawerContent(props)}
+      screenOptions={{
+        drawerPosition: "right",
+      }}
+      >
+      <Drawer.Screen 
+        name="Menu" 
+        component={TabNavigation}
+        options = {headerShown}
+      />
+    </Drawer.Navigator>
+  )
+}
+
+const StackApp = createStackNavigator();
+
 export default function App() {
   return (
-    <NavigationContainer>
-        <StatusBar style="auto"/>
-          <Drawer.Navigator 
-            initialRouteName='Menu'
-            drawerContent={props => CustomDrawerContent(props)}
-            screenOptions={{
-              drawerPosition: "right",
-            }}
-            >
-            <Drawer.Screen 
-              name="Menu" 
-              component={TabNavigation}
-              options = {headerShown}
-              />
-          </Drawer.Navigator>
+    <NavigationContainer 
+      initialRouteName='Session'
+    >
+      <StatusBar style="auto"/>
+      <StackApp.Navigator>
+        <StackApp.Screen 
+          name="Session" 
+          component={Session}
+          options = {headerShown}
+        />
+
+        <StackApp.Screen 
+          name="AppAcess" 
+          component={DrawerNavigator}
+          options = {headerShown}
+        />
+      </StackApp.Navigator>
     </NavigationContainer>
   );
 }
