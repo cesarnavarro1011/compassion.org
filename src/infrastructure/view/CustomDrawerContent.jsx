@@ -60,7 +60,6 @@ const styles = StyleSheet.create({
     height: '100%',
     position: "absolute",
     display: "flex",
-
   },
   
   container_submenu: {

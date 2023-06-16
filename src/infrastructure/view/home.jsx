@@ -1,5 +1,4 @@
-// import * as Constants from 'expo-device';
-import { StyleSheet, Text, View } from 'react-native';
+  import { StyleSheet, Text, View } from 'react-native';
 import CardReportHome from '../components/card-report-home';
 import List from './list';
 import PerfilPartaker from './Perfil-partaker';
@@ -8,7 +7,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function Home({ navigation }) {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Header 
         title="" 
         isBack={true} 
@@ -34,7 +33,7 @@ export default function Home({ navigation }) {
           }}  
         />
       </View>
-    </View>
+    </SafeAreaView>
     
   );
 }
@@ -45,7 +44,6 @@ export default function Home({ navigation }) {
       // backgroundColor: 'red',
       width: "100%",
       height: "100%",
-      // marginTop: Constants.statusBarHeight,
     },
 
     container_user: {

@@ -1,10 +1,10 @@
+import * as Constants from 'expo-device';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import * as Constants from 'expo-device';
 import { Ionicons } from '@expo/vector-icons';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function Header({title, isBack, navigation }) {
-
   return (
     <View style={styles.container_header}>
       <View style={styles.subcontainer_header}> 
@@ -17,7 +17,7 @@ export default function Header({title, isBack, navigation }) {
         <Ionicons style={styles.container_nav__button_back}
           title = "Open"
           name = "md-chevron-back"
-          onPress={navigation.goBack} 
+          // onPress={navigation.goBack} 
         />
       } 
           <View style={styles.container_group_header}>
@@ -45,16 +45,12 @@ const styles = StyleSheet.create({
 
   container_header: {
     backgroundColor: '#00A6FB',
-    // opacity: 0.5,
-    // blurRadius: 1,
     width: "100%",
-    height: 85,
+    height: 65,
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    // marginTop: Constants.statusBarHeight,
-    paddingTop: 20,
   },
 
   subcontainer_header: {
@@ -63,8 +59,8 @@ const styles = StyleSheet.create({
     height: "100%",
     display: "flex",
     flexDirection: "row",
-    alignItems: "center",
     justifyContent: "space-between",
+    alignItems: "center",
     marginLeft: "auto",
     marginRight: "auto",
   },

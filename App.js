@@ -94,7 +94,7 @@ function TabNavigation() {
       />
       <Tab.Screen 
         name = "Settings" 
-        component = {null}
+        component = {PerfilPartaker}
         options = {{
           headerShown: false,
           tabBarLabel: "Settings",

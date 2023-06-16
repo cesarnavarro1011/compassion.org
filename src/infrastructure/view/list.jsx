@@ -2,11 +2,12 @@ import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import ListParticipants from "../components/list-participants";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Header from "../components/layaut/header";
+import * as Constants from 'expo-device';
 
 const List = ({ navigation }) => {
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
     <Header title="listado" />
       <View style={styles.posts}>
       </View>
@@ -22,7 +23,7 @@ const List = ({ navigation }) => {
           }}/>
         </View>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -34,14 +35,12 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     color: "white",
-    // marginTop: 15,
   },
 
   posts: {
     backgroundColor: "#00A6FB",         
     width: '100%',
-    height: 120,
-    
+    height: 100,
   },
 
   item: {

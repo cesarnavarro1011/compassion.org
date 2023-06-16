@@ -5,30 +5,41 @@ import { Box, Text, Heading, VStack, HStack, FormControl, Input, Link, Button, S
 import { MaterialIcons } from "@expo/vector-icons";
 
 
-function Session({ navigation }) {
+function SessionForm({ navigation }) {
 
   const [formData, setData] = React.useState({});
   const [errors, setErrors] = React.useState({});
-
+  
   const validate = () => {
+
+    if (formData.name === undefined && formData.password === undefined) {
+      setErrors({ ...errors,
+        name:'El campo Correo está vacio',
+        password:'El campo Contraseña está vacio'
+      })
+    return false;
+    }
     if (formData.name === undefined) {
       setErrors({ ...errors,
-        name: 'Name is required'
-    })
-    } if (formData.password === undefined) {
-      setErrors({ ...errors,
-        password: 'password is required'
+        password: 'El campo Correo está vacio'
     })
       return false;
-    } else if (formData.name.length < 3) {
+    } 
+    if (formData.password === undefined) {
+      setErrors({ ...errors,
+        password: 'El campo Contraseña está vacio'
+      })
+      return false;
+    } 
+    else if (formData.name.length === "@" ) {
       setErrors({ ...errors,  
-        name: 'Name is too short'
+        name: 'No parece Correo'
       });
       return false;
-    }
+    } 
     else if (formData.password.length < 3) {
       setErrors({ ...errors,  
-        password: 'Name is too short'
+        password: 'La contraseña está vacia'
       });
       return false;
     }
@@ -36,10 +47,9 @@ function Session({ navigation }) {
   };
 
   const onSubmit = () => {
-    validate() ? console.log('Submitted') : console.log('Validation Failed');
+    // validate() ? console.log(formData) : console.log('Validation Failed');
+
   };
-
-
     return <Center w="100%"> 
         <Image source={require('../../../assets/img/logos/sembrando_la_preciosa_semilla.png')}
           alt="logo cdi-581" 
@@ -57,25 +67,35 @@ function Session({ navigation }) {
                 <FormControl.Label>Correo</FormControl.Label>
                 <Input 
                   fontSize= "md" 
-                  placeholder="Johnlewil@gmail.com" 
+                  placeholder="Jhon+cdi581@gmail.com" 
                   onChangeText={value => setData({ ...formData, name: value })}
                 />
+                {'name' in errors ? 
+                <FormControl.ErrorMessage>{errors.name}</FormControl.ErrorMessage> : 
+                  <FormControl.HelperText></FormControl.HelperText>
+                }
               </FormControl>
               <FormControl isRequired isInvalid={'password' in errors}>
               <FormControl.Label>Contraseña</FormControl.Label>
                 <Input 
                   type="password" 
-                  placeholder="carateres @#$%&"
+                  placeholder="Contener más de 6 caracteres"
                   fontSize= "md"
                   onChangeText={value => setData({ ...formData, password: value })}
                 />
-                <Link _text={{ fontSize: "sm", fontWeight: "500", color: "indigo.500" }} alignSelf="flex-end" mt="1" >
+                {'password' in errors ? 
+                <FormControl.ErrorMessage>{errors.password}</FormControl.ErrorMessage> : 
+                  <FormControl.HelperText></FormControl.HelperText>
+                }
+                <Link _text={{ fontSize: "xs", fontWeight: "500", color: "indigo.500" }} alignSelf="flex-end" mt="1" >
                   Se te ha olvidado la contraseña?
                 </Link>
               </FormControl>
               <Button mt="2" bg="primary.600" colorScheme="indigo" 
                 // isLoading isLoadingText="Enviando"
-                onPress={onSubmit} >
+                onPress = {()=> {
+                  navigation.navigate('AppAcess')
+                }} >
                 Iniciar Session
               </Button>
               {/* <HStack mt="6" justifyContent="center">
@@ -97,7 +117,7 @@ function Session({ navigation }) {
     </Center>;
 }
 
-export default () => {
+export default function Session({ navigation }) {
     return (
       <NativeBaseProvider>
         <Flex direction="row" style={styles.container_logo}>
@@ -107,13 +127,12 @@ export default () => {
             />
         </Flex>
         <Center flex={1} px="3">
-            <Session />
+            <SessionForm navigation={navigation}/>
         </Center>
         <HStack style={styles.container_create} w="40" alignSelf="flex-end">
             <Text fontSize="xs" fontWeight="200" italic>Create by </Text>
             <Text fontSize="xs" fontWeight="200"> César Navarro</Text>
         </HStack>
-
       </NativeBaseProvider>
     );
 };

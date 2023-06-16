@@ -5,7 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function PerfilPartaker() {
     return (
-        <View style={styles.container__scroll}>
+        <SafeAreaView style={styles.container__scroll}>
         <Header title="perfil participante"/>
             <ScrollView style={styles.container__perfilPartaker}>
                 <View style={styles.container_perfilPartaker__coverImage}>
@@ -47,7 +47,7 @@ export default function PerfilPartaker() {
                     </View>
                 </View> 
             </ScrollView>
-        </View>
+        </SafeAreaView>
     );
 }
 
