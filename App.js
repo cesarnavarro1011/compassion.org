@@ -15,6 +15,7 @@ import { StatusBar } from 'expo-status-bar';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { AntDesign, Ionicons } from '@expo/vector-icons';
 import Session from './src/infrastructure/view/session';
+import PerfilStaff from './src/infrastructure/view/perfil-staff';
 
 const  headerShown = () => ({
   headerShown: false
@@ -94,7 +95,7 @@ function TabNavigation() {
       />
       <Tab.Screen 
         name = "Settings" 
-        component = {PerfilPartaker}
+        component = {PerfilStaff}
         options = {{
           headerShown: false,
           tabBarLabel: "Settings",
