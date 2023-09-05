@@ -68,14 +68,16 @@ export default () => {
         <Center flex={1} px="3">
             <Session />
         </Center>
-        <HStack w="40" alignSelf="flex-end">
-            <Text fontSize="xs" fontWeight="200" italic>Create by </Text>
-            <Text fontSize="xs" fontWeight="200"> César Navarro</Text>
-        </HStack>
+        <VStack w="40" alignSelf="flex-end">
+          <Flex flexDirection="row">
+              <Text fontSize="xs" fontWeight="300" italic>Create by </Text>
+              <Text fontSize="xs" fontWeight="200">César Navarro</Text>
+          </Flex>
+        </VStack>
       </NativeBaseProvider>
     );
 };
- 
+
 const styles = StyleSheet.create({
 
     container_logo: {
