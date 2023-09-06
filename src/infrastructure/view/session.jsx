@@ -129,14 +129,14 @@ export default function Session({ navigation }) {
         <Center flex={1} px="3">
             <SessionForm navigation={navigation}/>
         </Center>
-        <HStack style={styles.container_create} w="40" alignSelf="flex-end">
+        <HStack w="40" alignSelf="flex-end">
             <Text fontSize="xs" fontWeight="200" italic>Create by </Text>
             <Text fontSize="xs" fontWeight="200"> César Navarro</Text>
         </HStack>
       </NativeBaseProvider>
     );
 };
- 
+
 const styles = StyleSheet.create({
 
     container_logo: {
