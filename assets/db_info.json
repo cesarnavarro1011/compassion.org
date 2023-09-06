@@ -132,9 +132,31 @@
     ]
   },
   {
-    "id": "partaker",
+    "id": 113,
     "foto": "",
-    "nombre": "keller patiño",
+    "nombre": "Keller David Patino Mosquera",
+    "grupo_etario": "", 
+    "edad": 35,
+    "genero": "femenino",
+    "estatura": 1.80,
+    "peso": 60,
+    "nacimiento": "",
+    "educacion": "",
+    "celular": 301,
+    "lugar de residencia": "Ciudad C",
+    "reportes": [ 
+      {
+        "actualizaciones": "15 meses",
+        "revision_medica": "9 meses",
+        "cdpr": "2 años 3 meses",
+        "antropometria": "5 meses"
+      }
+    ]
+  },
+  {
+    "id": 531,
+    "foto": "",
+    "nombre": "Jhoan Yuseth Parody Fernandez",
     "grupo_etario": "",
     "edad": 35,
     "genero": "femenino",
@@ -154,9 +176,9 @@
     ]
   },
   {
-    "id": "partaker",
+    "id": 108,
     "foto": "",
-    "nombre": "jhoan",
+    "nombre": "Jesus Daniel Padilla Sandoval",
     "grupo_etario": "",
     "edad": 35,
     "genero": "femenino",
@@ -176,31 +198,9 @@
     ]
   },
   {
-    "id": "partaker",
+    "id": 169,
     "foto": "",
-    "nombre": "jesus",
-    "grupo_etario": "",
-    "edad": 35,
-    "genero": "femenino",
-    "estatura": 1.80,
-    "peso": 60,
-    "nacimiento": "",
-    "educacion": "",
-    "celular": 301,
-    "lugar de residencia": "Ciudad C",
-    "reportes": [ 
-      {
-        "actualizaciones": "15 meses",
-        "revision_medica": "9 meses",
-        "cdpr": "2 años 3 meses",
-        "antropometria": "5 meses"
-      }
-    ]
-  },
-  {
-    "id": "partaker",
-    "foto": "",
-    "nombre": "andres navarro",
+    "nombre": "Andres Sebastian Navarro",
     "grupo_etario": "",
     "edad": 35,
     "genero": "femenino",
