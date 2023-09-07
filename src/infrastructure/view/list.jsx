@@ -3,6 +3,7 @@ import ListParticipants from "../components/list-participants";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Header from "../components/layaut/header";
 import * as Constants from 'expo-device';
+import db from "../../../assets/db_info.json";
 
 const List = ({ navigation }) => {
 
@@ -18,9 +19,13 @@ const List = ({ navigation }) => {
         <View style={styles.list}>
           <ListParticipants 
           name = "partaker"
+          // navigation = {navigation}
           onPress = {()=> {
-            navigation.navigate('PerfilPartaker')
-          }}/>
+            navigation.navigate('PerfilPartaker',{
+              db
+            })
+          }}
+          />
         </View>
       </ScrollView>
     </SafeAreaView>

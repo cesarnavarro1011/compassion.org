@@ -2,27 +2,25 @@ import { StyleSheet, Text, TouchableOpacity, Image, } from "react-native";
 import db_info from "../../../assets/db_info.json";
 
 export default function ListParticipants( props ) { 
-    const { onPress, item } = props
+    const { onPress, item, navigation } = props
   return (
-    <>
-    { db_info.map((bd) => ( 
+    db_info.map((bd) => ( 
       <TouchableOpacity style={styles.participants}
         onPress={ onPress }
         key={bd.id}
+        // onPress = {}
       >
         <Image style={styles.imgParticipants} source={require('../../../assets/img/imageDefaut.png')}/>
         <Text style={styles.nameParticipants}>{bd.nombre}</Text>
       </TouchableOpacity>
-      )) 
-    }
-    </>
+    )) 
   );
 }
 
 const styles = StyleSheet.create({
 
   participants: {
-    backgroundColor: "#00A6FB",
+    // backgroundColor: "#00A6FB",
     width: "100%",
     height: 70,
     display: 'flex',
@@ -44,10 +42,10 @@ const styles = StyleSheet.create({
 
   nameParticipants: {
     color: "white",
-    fontSize: 18,
+    fontSize: 17,
     width: '100%',
     height: '100%',
-    lineHeight: 44,
+    lineHeight: 55,
     paddingLeft: 15,
   },
 })

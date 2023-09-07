@@ -3,8 +3,9 @@ import CardReportPerfil from "../components/card-report-perfil";
 import Header from "../components/layaut/header";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-export default function PerfilPartaker() {
-    
+export default function PerfilPartaker({ route, navigation }) {
+    const { db } = route.params;
+    const data = db[1];
     return (
         <SafeAreaView style={styles.container__scroll}>
         <Header title="perfil participante"/>
@@ -14,23 +15,23 @@ export default function PerfilPartaker() {
                 </View>
                 <View style={styles.container__data}>
                     <View style={styles.container_data__group}>
-                        <Text style={styles.container_data__name}>Jhoana marcela benitez pertuz</Text>
+                        <Text style={styles.container_data__name}>{data.nombre}</Text>
                         <View style={styles.container_data__details}>
                             <Text style={styles.container_data_details__information}>Información</Text>
                             <Text style={styles.container_data_details__title}>ID</Text>
-                            <Text style={styles.container_data_details__text}>CO05810000</Text>
+                            <Text style={styles.container_data_details__text}>CO058100{data.id}</Text>
                             <Text style={styles.container_data_details__title}>Grupo etario</Text>
-                            <Text style={styles.container_data_details__text}>15-18</Text>
+                            <Text style={styles.container_data_details__text}>{data.grupo_etario}</Text>
                             <Text style={styles.container_data_details__title}>Sexo</Text>
-                            <Text style={styles.container_data_details__text}>Female</Text>
+                            <Text style={styles.container_data_details__text}>{data.genero}</Text>
                             <Text style={styles.container_data_details__title}>Edad</Text>
-                            <Text style={styles.container_data_details__text}>18 Years 11 Months</Text>
+                            <Text style={styles.container_data_details__text}>{data.edad}</Text>
                             <Text style={styles.container_data_details__title}>Educación</Text>
-                            <Text style={styles.container_data_details__text}>Culminado</Text>
+                            <Text style={styles.container_data_details__text}>{data.educacion}</Text>
                             <Text style={styles.container_data_details__title}>Dirección</Text>
-                            <Text style={styles.container_data_details__text}>Calle 13 A #43-92</Text>
+                            <Text style={styles.container_data_details__text}>{data.direccion}</Text>
                             <Text style={styles.container_data_details__title}>Fecha de nacimiento</Text>
-                            <Text style={styles.container_data_details__text}>11/11/2000</Text>
+                            <Text style={styles.container_data_details__text}>{data.nacimiento}</Text>
                         </View>
 
                         <View style={styles.container_data__report}>
