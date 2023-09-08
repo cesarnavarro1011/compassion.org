@@ -4,6 +4,7 @@ import List from './list';
 import PerfilPartaker from './Perfil-partaker';
 import Header from '../components/layaut/header';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import db_info from "../../../assets/db_info.json";
 
 export default function Home({ navigation }) {
   return (
@@ -24,15 +25,20 @@ export default function Home({ navigation }) {
         <Text>informacion adicional que pase como su fuece closed ca</Text>
       </View>
 
-      <View style={styles.container_data}>
+      <View style={styles.container_data}>{
+        db_info.map((db) => (
         <CardReportHome 
-          title = "actualizaciones"
-          description= "999"
-          onPress={ () => {
-            navigation.navigate('List')
+          key = {db.id}
+          title = {db.name}
+          description= {db.cantidad}
+          data = {db}
+          onPress={() => {
+            navigation.navigate('List',{
+              ...db
+            })
           }}  
-        />
-      </View>
+        />))
+        }</View>
     </SafeAreaView>
     
   );
@@ -79,8 +85,8 @@ export default function Home({ navigation }) {
       height: "auto",
       display: 'flex',
       flexDirection: 'row',
-      justifyContent: 'space-around',
+      justifyContent: 'space-evenly',
       alignContent: 'center',
-      // flexWrap: "wrap", ad
+      flexWrap: "wrap", 
     },
   });

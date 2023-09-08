@@ -1,18 +1,18 @@
 import { StyleSheet, Text, TouchableOpacity, Image, } from "react-native";
-import db from "../../../assets/db_info.json";
+// import db from "../../../assets/db_info.json";
 
 export default function ListParticipants( props ) { 
-    const { key, navigation } = props
+    const { data , navigation } = props
   return (
       <TouchableOpacity style={styles.participants}
         onPress = {()=> {
           navigation.navigate('PerfilPartaker',{
-              key
+            data
             })
           }}
       >
         <Image style={styles.imgParticipants} source={require('../../../assets/img/imageDefaut.png')}/>
-        <Text style={styles.nameParticipants}>{db.nombre}</Text>
+        <Text style={styles.nameParticipants}>{data.nombre}</Text>
       </TouchableOpacity>
   );
 }

@@ -4,7 +4,7 @@ import Header from "../components/layaut/header";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function PerfilPartaker({ route, navigation }) {
-    const { key } = route.params;
+    const { data } = route.params;
     return (
         <SafeAreaView style={styles.container__scroll}>
         <Header title="perfil participante"/>
@@ -20,7 +20,7 @@ export default function PerfilPartaker({ route, navigation }) {
                             <Text style={styles.container_data_details__title}>ID</Text>
                             <Text style={styles.container_data_details__text}>CO058100{data.id}</Text>
                             <Text style={styles.container_data_details__title}>Grupo etario</Text>
-                            <Text style={styles.container_data_details__text}>{data.grupo_etario}</Text>
+                            <Text style={styles.container_data_details__text}>{data.grupoEtario}</Text>
                             <Text style={styles.container_data_details__title}>Sexo</Text>
                             <Text style={styles.container_data_details__text}>{data.genero}</Text>
                             <Text style={styles.container_data_details__title}>Edad</Text>

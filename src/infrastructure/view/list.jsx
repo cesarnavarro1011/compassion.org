@@ -3,28 +3,30 @@ import ListParticipants from "../components/list-participants";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Header from "../components/layaut/header";
 import * as Constants from 'expo-device';
-import db_info from "../../../assets/db_info.json";
+// import db_info from "../../../assets/db_info.json";
 
-const List = ({ navigation }) => {
-
+const List = ({ route, navigation }) => {
+  const { db } = route.params;
+  const data = Array(db)
   return (
     <SafeAreaView style={styles.container}>
     <Header title="listado" />
       <View style={styles.posts}>
       </View>
       <View style={styles.item}>
-        <Text style={styles.title}>name of item</Text>
+        <Text style={styles.title}>{db.name}</Text>
       </View>
       <ScrollView>
         <View style={styles.list}>
-          <View style={styles.list}> {
-            db_info.map((db) => ( 
+          <View style={styles.list}>{
+            data.map((db) => ( 
               <ListParticipants 
               key={db.id}
               navigation={navigation}
+              data = {db}
               />
-            ))}
-          </View>
+            ))
+          }</View>
         </View>
       </ScrollView>
     </SafeAreaView>
