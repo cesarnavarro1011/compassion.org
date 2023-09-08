@@ -4,8 +4,7 @@ import Header from "../components/layaut/header";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function PerfilPartaker({ route, navigation }) {
-    const { db } = route.params;
-    const data = db[1];
+    const { key } = route.params;
     return (
         <SafeAreaView style={styles.container__scroll}>
         <Header title="perfil participante"/>
