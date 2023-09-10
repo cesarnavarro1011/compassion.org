@@ -5,6 +5,7 @@ import PerfilPartaker from './Perfil-partaker';
 import Header from '../components/layaut/header';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import db_info from "../../../assets/db_info.json";
+import { Image } from 'react-native';
 
 export default function Home({ navigation }) {
   return (
@@ -18,8 +19,7 @@ export default function Home({ navigation }) {
         <Text  style={styles.container_user__text}>Bienvenido Tutor "User"</Text>
       </View>
 
-      <View style={styles.container_notice}>
-      </View>
+      <Image style={styles.container_notice} source={require('../../../assets/img/post/postHome.png')}/>
 
       <View style={styles.container_info}>
         <Text>informacion adicional que pase como su fuece closed ca</Text>

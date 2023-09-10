@@ -2,6 +2,7 @@
   {
     "id": 1,
     "name": "Actualizaciones",
+    "foto": "revisionmedica.jpg",
     "cantidad": 45,
     "actualizaciones": [
       {
@@ -229,6 +230,7 @@
   {
     "id": 2,
     "name": "Antropometria",
+    "foto": "revisionmedica.jpg",
     "cantidad": 20,
     "antropometria": [
       {
@@ -456,6 +458,7 @@
   { 
     "id": 3,
     "name": "Revision Medica",
+    "foto": "revisionmedica.jpg",
     "cantidad": 80,
     "Revision Medica": [
       {
@@ -683,6 +686,7 @@
   { 
     "id": 4,
     "name": "CDPR",
+    "foto": "revisionmedica.jpg",
     "cantidad": 10,
     "cdpr": [
       {

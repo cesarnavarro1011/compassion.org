@@ -23,7 +23,7 @@ export default CardReportHome
   const styles = StyleSheet.create({
 
     container: {
-      backgroundColor: '#009DDC',
+      backgroundColor: '#49B6FF',
       width: "47%",
       height: 110,
       borderRadius: 5,
