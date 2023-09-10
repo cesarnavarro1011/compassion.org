@@ -7,7 +7,8 @@ import * as Constants from 'expo-device';
 
 const List = ({ route, navigation }) => {
   const { db } = route.params;
-  const data = Array(db)
+  const dbPosition = Object.values(db)[3];
+
   return (
     <SafeAreaView style={styles.container}>
     <Header title="listado" />
@@ -19,14 +20,14 @@ const List = ({ route, navigation }) => {
       <ScrollView>
         <View style={styles.list}>
           <View style={styles.list}>{
-            data.map((db) => ( 
-              <ListParticipants 
-              key={db.id}
+            dbPosition.map((data) => (  
+              <ListParticipants
+              key={data.id}
               navigation={navigation}
-              data = {db}
+              data = {data}
               />
-            ))
-          }</View>
+            ))}
+          </View>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -46,7 +47,7 @@ const styles = StyleSheet.create({
   posts: {
     backgroundColor: "#00A6FB",         
     width: '100%',
-    height: 100,
+    height: 50,
   },
 
   item: {
@@ -68,6 +69,8 @@ const styles = StyleSheet.create({
     height: '100%',
     paddingTop: 2,
     paddingLeft: 2,
+    display: 'flex',
+    alignItems: 'center',
   },
 
 })

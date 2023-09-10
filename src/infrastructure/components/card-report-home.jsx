@@ -23,8 +23,8 @@ export default CardReportHome
   const styles = StyleSheet.create({
 
     container: {
-      backgroundColor: '#00A6FB',
-      width: 125,
+      backgroundColor: '#009DDC',
+      width: "47%",
       height: 110,
       borderRadius: 5,
       display: 'flex',
@@ -35,13 +35,13 @@ export default CardReportHome
 
     container__title: {
       color: '#FFFFFF',
-      fontSize: 16,
-      height: 30,
+      fontSize: 18,
+      height: 35,
     },
     
     container__description: {
       color: '#FFFFFF',
-      fontSize: 16,
+      fontSize: 18,
       height: 35,
       fontWeight: 'bold',
       alignContent: 'center',

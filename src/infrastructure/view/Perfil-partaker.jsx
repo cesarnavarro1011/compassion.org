@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
 
     container_data__name: {
         fontSize: 24,
-        height: 60,
+        height: 40,
         marginBottom: 20,
         textAlign: "center",
         fontWeight: "bold",

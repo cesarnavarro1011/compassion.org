@@ -20,16 +20,17 @@ export default function ListParticipants( props ) {
 const styles = StyleSheet.create({
 
   participants: {
-    // backgroundColor: "#00A6FB",
-    width: "100%",
+    backgroundColor: "#FCF7F8",
+    width: "97%",
     height: 70,
     display: 'flex',
     flexDirection: "row",
     alignContent: "center",
-    paddingLeft: 15,
+    paddingLeft: 10,
     paddingTop: 10,
     marginBottom: 3,
     textAlign: "center",
+    borderRadius: 5,
   },
 
   imgParticipants: {
@@ -37,15 +38,14 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     borderRadius: 25,
-
   },
 
   nameParticipants: {
-    color: "white",
-    fontSize: 17,
+    color: "black",
+    fontSize: 18,
     width: '100%',
     height: '100%',
-    lineHeight: 55,
+    lineHeight: 51,
     paddingLeft: 15,
   },
 })

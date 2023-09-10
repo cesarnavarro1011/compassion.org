@@ -34,7 +34,7 @@ export default function Home({ navigation }) {
           data = {db}
           onPress={() => {
             navigation.navigate('List',{
-              ...db
+              db
             })
           }}  
         />))
@@ -47,7 +47,7 @@ export default function Home({ navigation }) {
   const styles = StyleSheet.create({
 
     container: {
-      // backgroundColor: 'red',
+      backgroundColor: '#FCF7F8',
       width: "100%",
       height: "100%",
     },

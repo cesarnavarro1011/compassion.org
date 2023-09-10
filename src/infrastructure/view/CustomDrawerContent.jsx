@@ -30,7 +30,7 @@ export default function CustomDrawerContent({ navigation }) {
         </View>
 
           <View style={styles.container_submenu__opcions}>
-            <TouchableOpacity style={styles.container_submenu_opcions__iconsAndText} onPress={() => {navigation.navigate('List')}}>
+            <TouchableOpacity style={styles.container_submenu_opcions__iconsAndText} onPress={() => {navigation.navigate('List',{ })}}>
               <MaterialCommunityIcons style={styles.icon} name="update" size={30}/>
               <MenuOpcions nameText="Actualizacion"/>
             </TouchableOpacity>
