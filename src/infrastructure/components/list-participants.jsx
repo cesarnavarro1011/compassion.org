@@ -3,6 +3,8 @@ import { StyleSheet, Text, TouchableOpacity, Image, } from "react-native";
 
 export default function ListParticipants( props ) { 
     const { data , navigation } = props
+  const imagePerfil = JSON.stringify(data.foto);
+    
   return (
       <TouchableOpacity style={styles.participants}
         onPress = {()=> {
@@ -11,7 +13,7 @@ export default function ListParticipants( props ) {
             })
           }}
       >
-        <Image style={styles.imgParticipants} source={require('../../../assets/img/imageDefaut.png')}/>
+        {/* <Image style={styles.imgParticipants} source={require(`../../../assets/img/perfilPartaker/${imagePerfil}`)}/> */}
         <Text style={styles.nameParticipants}>{data.nombre}</Text>
       </TouchableOpacity>
   );
