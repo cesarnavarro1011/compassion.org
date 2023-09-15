@@ -10,7 +10,7 @@ export default function PerfilPartaker({ route, navigation }) {
         <Header title="perfil participante"/>
             <ScrollView style={styles.container__perfilPartaker}>
                 <View style={styles.container_perfilPartaker__coverImage}>
-                    <Image style={styles.container_perfilPartaker__perfil} source={require('../../../assets/img/imageDefaut.png')}/>
+                    <Image style={styles.container_perfilPartaker__perfil} source={require('../../../asset/img/imageDefaut.png')}/>
                 </View>
                 <View style={styles.container__data}>
                     <View style={styles.container_data__group}>

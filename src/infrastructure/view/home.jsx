@@ -4,7 +4,7 @@ import List from './list';
 import PerfilPartaker from './Perfil-partaker';
 import Header from '../components/layaut/header';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import db_info from "../../../assets/db_info.json";
+import db_compassion from "../../../asset/db_compassion.json";
 import { Image } from 'react-native';
 
 export default function Home({ navigation }) {
@@ -19,14 +19,14 @@ export default function Home({ navigation }) {
         <Text  style={styles.container_user__text}>Bienvenido Tutor "User"</Text>
       </View>
 
-      <Image style={styles.container_notice} source={require('../../../assets/img/post/postHome.png')}/>
+      <Image style={styles.container_notice} source={require('../../../asset/img/post/postHome.png')}/>
 
       <View style={styles.container_info}>
         <Text>informacion adicional que pase como su fuece closed ca</Text>
       </View>
 
       <View style={styles.container_data}>{
-        db_info.map((db) => (
+        db_compassion.map((db) => (
         <CardReportHome 
           key = {db.id}
           title = {db.name}

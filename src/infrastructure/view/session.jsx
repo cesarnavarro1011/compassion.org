@@ -51,7 +51,7 @@ function SessionForm({ navigation }) {
 
   };
     return <Center w="100%"> 
-        <Image source={require('../../../assets/img/logos/sembrando_la_preciosa_semilla.png')}
+        <Image source={require('../../../asset/img/logos/sembrando_la_preciosa_semilla.png')}
           alt="logo cdi-581" 
           style={styles.logo_cdi}
         />
@@ -121,7 +121,7 @@ export default function Session({ navigation }) {
     return (
       <NativeBaseProvider>
         <Flex direction="row" style={styles.container_logo}>
-          <Image source={require('../../../assets/img/logos/compassion.png')} 
+          <Image source={require('../../../asset/img/logos/compassion.png')} 
             alt="logo compassion" 
             style={styles.logo_compassion}
             />

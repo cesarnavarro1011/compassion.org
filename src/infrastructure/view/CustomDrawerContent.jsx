@@ -1,25 +1,26 @@
-import { StyleSheet, Image, View, Button, Text, ScrollView} from "react-native";
+import { StyleSheet, Image, View, Button, Text, ScrollView } from "react-native";
 import MenuOpcions from "../components/menu-opcions";
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import db_project from "../../../asset/db_project.json";
 
 export default function CustomDrawerContent({ navigation }) {
-
-  // var icon = this.props.active
-  // ? require('')
-  // : require('../../../assets/img/imageDefaut.png');
-
+    const db = Object.values(db_project)[1];
+    const data = db.filter((x)=>(x.id=== 22))[0]
+    // console.log(data);
   return (
-    <View style={styles.container_menu}>
+    <SafeAreaView style={styles.container_menu}>
       <View style={styles.container_submenu}>
         <View style={styles.container_submenu__content_perfil}>
-          <Image style={styles.content_perfil__perfil} source={require('../../../assets/img/imageDefaut.png')}/>
+
+          <Image style={styles.content_perfil__Background} blurRadius={25} source={require('../../../asset/img/perfil/staff/asegurador.png')}/>
+          <Image style={styles.content_perfil__perfil} source={require('../../../asset/img/perfil/staff/asegurador.png')}/>
           <View style={styles.content_perfil__data}>
-            <Text style={styles.data__username}>César Navarro</Text>
-            <Text style={styles.data__ocupation}>ocupatión</Text>
+            <Text style={styles.data__username}>{data.name}</Text>
+            <Text style={styles.data__ocupation}>{data.ocupation}</Text>
             {/* <View style={styles.data__button_editar_perfil}>
               <Button title="Ver perfil"           
                 onPress={ () => {
@@ -31,24 +32,40 @@ export default function CustomDrawerContent({ navigation }) {
 
           <View style={styles.container_submenu__opcions}>
             <TouchableOpacity style={styles.container_submenu_opcions__iconsAndText} onPress={() => {navigation.navigate('List',{ })}}>
-              <MaterialCommunityIcons style={styles.icon} name="update" size={30}/>
-              <MenuOpcions nameText="Actualizacion"/>
-            </TouchableOpacity>
+                <MaterialCommunityIcons 
+                  style={styles.icon} 
+                  name="update" 
+                  size={30}
+                  />
+                <MenuOpcions nameText="Actualizacion"/>
+              </TouchableOpacity>
             <TouchableOpacity style={styles.container_submenu_opcions__iconsAndText} onPress={() => {navigation.navigate('List')}}>
-              <AntDesign style={styles.icon} name="addusergroup" size={30}/>
-              <MenuOpcions nameText="CDPR" />
-            </TouchableOpacity>
+                <AntDesign 
+                  style={styles.icon} 
+                  name="addusergroup" 
+                  size={30}
+                  />
+                <MenuOpcions nameText="CDPR" />
+              </TouchableOpacity>
             <TouchableOpacity style={styles.container_submenu_opcions__iconsAndText} onPress={() => {navigation.navigate('List')}}>
-              <AntDesign style={styles.icon} name="medicinebox" size={30}/>
-              <MenuOpcions nameText="Revisión Medica"/>
-            </TouchableOpacity>
+                <AntDesign 
+                  style={styles.icon} 
+                  name="medicinebox" 
+                  size={30}
+                  />
+                <MenuOpcions nameText="Revisión Medica"/>
+              </TouchableOpacity>
             <TouchableOpacity style={styles.container_submenu_opcions__iconsAndText} onPress={() => {navigation.navigate('List')}}>
-              <MaterialCommunityIcons style={styles.icon} name="human-male-height" size={30}/>
-              <MenuOpcions nameText="Antropometria"/>
-            </TouchableOpacity>
+                <MaterialCommunityIcons 
+                  style={styles.icon} 
+                  name="human-male-height" 
+                  size={30}
+                  />
+                <MenuOpcions nameText="Antropometria"/>
+              </TouchableOpacity>
           </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -70,17 +87,23 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 
+  content_perfil__Background: {
+    width: '100%',
+    height: '100%',
+    position: 'absolute', 
+    resizeMode: 'cover',
+  },
+
   container_submenu__content_perfil: {
     backgroundColor: "#00A1FB",
     width: '100%',
-    height: 270,
-    paddingTop: 40,
+    height: 260,
     borderRadius: 5,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    blurRadius: 90,
+    position: 'relative', resizeMode: 'cover',
   },
 
   content_perfil__perfil: {
@@ -89,6 +112,8 @@ const styles = StyleSheet.create({
     height: 150,
     borderRadius: 100,
     zIndex: 100,
+    border: "3px solid white",
+
   },
 
   content_perfil__data: {

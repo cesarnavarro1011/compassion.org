@@ -8,14 +8,15 @@ import * as Constants from 'expo-device';
 const List = ({ route, navigation }) => {
   const { db } = route.params;
   const dbPosition = Object.values(db)[4];
-  const uri = `../../../assets/img/post/${ db.foto }`;
+  console.log(dbPosition)
+
   return (
     <SafeAreaView style={styles.container}>
     <Header title="listado"/>
       <View style={styles.posts}>
-        <Image style={styles.posts_image} source={{ uri }}/>
+        <Image style={styles.posts_image} source={require(`../../../assets/img/post/revisionmedica.jpg`)}/>
       </View> 
-      <View style={styles.item}>  
+      <View style={styles.item}>
         <Text style={styles.title}>{db.name}</Text>
       </View>
       <ScrollView>
