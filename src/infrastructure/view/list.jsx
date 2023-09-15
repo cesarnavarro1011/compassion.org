@@ -8,6 +8,8 @@ import * as Constants from 'expo-device';
 const List = ({ route, navigation }) => {
   const { db } = route.params;
   const dbPosition = Object.values(db)[4];
+  console.log(dbPosition)
+
   return (
     <SafeAreaView style={styles.container}>
     <Header title="listado" />

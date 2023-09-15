@@ -4,7 +4,7 @@ import List from './list';
 import PerfilPartaker from './Perfil-partaker';
 import Header from '../components/layaut/header';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import db_info from "../../../asset/db_info.json";
+import db_compassion from "../../../asset/db_compassion.json";
 import { Image } from 'react-native';
 
 export default function Home({ navigation }) {
@@ -26,7 +26,7 @@ export default function Home({ navigation }) {
       </View>
 
       <View style={styles.container_data}>{
-        db_info.map((db) => (
+        db_compassion.map((db) => (
         <CardReportHome 
           key = {db.id}
           title = {db.name}
