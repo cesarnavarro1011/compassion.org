@@ -16,7 +16,7 @@ export default function CustomDrawerContent({ navigation }) {
     <View style={styles.container_menu}>
       <View style={styles.container_submenu}>
         <View style={styles.container_submenu__content_perfil}>
-          <Image style={styles.content_perfil__perfil} source={require('../../../assets/img/imageDefaut.png')}/>
+          <Image style={styles.content_perfil__perfil} source={require('../../../asset/img/imageDefaut.png')}/>
           <View style={styles.content_perfil__data}>
             <Text style={styles.data__username}>César Navarro</Text>
             <Text style={styles.data__ocupation}>ocupatión</Text>

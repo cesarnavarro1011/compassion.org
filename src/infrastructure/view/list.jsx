@@ -8,17 +8,15 @@ import * as Constants from 'expo-device';
 const List = ({ route, navigation }) => {
   const { db } = route.params;
   const dbPosition = Object.values(db)[4];
-  const image = JSON.stringify(db.foto);
-  console.log(image);
   return (
     <SafeAreaView style={styles.container}>
     <Header title="listado" />
       <View style={styles.posts}>
-        <Image style={styles.posts_image} source={require(`../../../assets/img/post/revisionmedica.jpg`)}/>
+        <Image style={styles.posts_image} source={require(`../../../asset/img/post/revisionmedica.jpg`)}/>
       </View> 
       <View style={styles.item}>
-        <Text style={styles.title}>{db.name}</Text>
-      </View>
+        <Text style={styles.title}>{db.name}</Text> 
+      </View>   
       <ScrollView>
         <View style={styles.list}>
           <View style={styles.list}>{
@@ -71,7 +69,6 @@ const styles = StyleSheet.create({
   
   title: {
     color: "white",
-    color: "black",
     height: 35,
     fontSize: 23,
     fontWeight: "bold",

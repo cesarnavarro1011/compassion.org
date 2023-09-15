@@ -11,7 +11,7 @@ export default function Header({title, isBack, navigation }) {
       {
         isBack ? 
           <View style={styles.container_group_header}>
-              <Image style={styles.container_header__logo} source={require('../../../../assets/img/logos/sembrando_la_preciosa_semilla.png')} />
+              <Image style={styles.container_header__logo} source={require('../../../../asset/img/logos/sembrando_la_preciosa_semilla.png')} />
           </View>
         : 
         <Ionicons style={styles.container_nav__button_back}

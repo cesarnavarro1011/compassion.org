@@ -11,7 +11,7 @@ export default function ListParticipants( props ) {
             })
           }}
       >
-        <Image style={styles.imgParticipants} source={require('../../../assets/img/imageDefaut.png')}/>
+        <Image style={styles.imgParticipants} source={require('../../../asset/img/imageDefaut.png')}/>
         <Text style={styles.nameParticipants}>{data.nombre}</Text>
       </TouchableOpacity>
   );
