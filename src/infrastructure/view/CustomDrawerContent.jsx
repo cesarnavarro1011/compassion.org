@@ -15,7 +15,8 @@ export default function CustomDrawerContent({ navigation }) {
     <SafeAreaView style={styles.container_menu}>
       <View style={styles.container_submenu}>
         <View style={styles.container_submenu__content_perfil}>
-        <Image style={styles.content_perfil__Background} source={require('../../../asset/img/perfil/staff/asegurador.png')}></Image>
+
+          <Image style={styles.content_perfil__Background} blurRadius={25} source={require('../../../asset/img/perfil/staff/asegurador.png')}/>
           <Image style={styles.content_perfil__perfil} source={require('../../../asset/img/perfil/staff/asegurador.png')}/>
           <View style={styles.content_perfil__data}>
             <Text style={styles.data__username}>{data.name}</Text>
@@ -90,7 +91,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     position: 'absolute', 
-    resizeMode: 'cover' 
+    resizeMode: 'cover',
   },
 
   container_submenu__content_perfil: {
@@ -102,9 +103,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    blurRadius: 90,
     position: 'relative', resizeMode: 'cover',
-    filter: "blur",
   },
 
   content_perfil__perfil: {
@@ -113,6 +112,8 @@ const styles = StyleSheet.create({
     height: 150,
     borderRadius: 100,
     zIndex: 100,
+    border: "3px solid white",
+
   },
 
   content_perfil__data: {
