@@ -11,8 +11,8 @@ export default function Header({title, isBack, navigation }) {
       {
         isBack ? 
           <View style={styles.container_group_header}>
-              <Image style={styles.container_header__logo} source={require('../../../../asset/img/logos/sembrando_la_preciosa_semilla.png')} />
-          </View>
+              <Image style={styles.container_header__logo} source={require('../../../../asset/img/logos/funsemilla.png')} />
+          </View>                                                 
         : 
         <Ionicons style={styles.container_nav__button_back}
           title = "Open"
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
   },
 
   container_header__title: {
-    color: "#FFFFFF",
+    color: "white",
     width: "100%",
     height: "100%",
     lineHeight: 70,

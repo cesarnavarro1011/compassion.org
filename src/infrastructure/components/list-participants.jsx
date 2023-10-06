@@ -1,20 +1,20 @@
-import { StyleSheet, Text, TouchableOpacity, Image, } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, Image, View, } from "react-native";
 // import db from "../../../assets/db_info.json";
 
 export default function ListParticipants( props ) { 
-    const { data , navigation } = props
-  const imagePerfil = JSON.stringify(data.foto);
-    
+    const { db , navigation } = props
+  // const imagePerfil = JSON.stringify(db.foto);
+    // console.log(imagePerfil)
   return (
       <TouchableOpacity style={styles.participants}
         onPress = {()=> {
           navigation.navigate('PerfilPartaker',{
-            data
+            db
             })
           }}
       >
-        <Image style={styles.imgParticipants} source={require('../../../asset/img/imageDefaut.png')}/>
-        <Text style={styles.nameParticipants}>{data.nombre}</Text>
+          <Image style={styles.imgParticipants} source={db.foto} keyExtractor={(db) => db.id}/>
+        <Text style={styles.nameParticipants}>{db.nombre}</Text>
       </TouchableOpacity>
   );
 }
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: "row",
     alignContent: "center",
-    paddingLeft: 3,
+    paddingLeft: 10,
     paddingTop: 10,
     marginBottom: 3,
     textAlign: "center",
@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     borderRadius: 25,
+    resizeMode: 'contain',
   },
 
   nameParticipants: {

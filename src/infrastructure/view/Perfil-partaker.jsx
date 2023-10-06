@@ -4,33 +4,33 @@ import Header from "../components/layaut/header";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function PerfilPartaker({ route, navigation }) {
-    const { data } = route.params;
+    const { db } = route.params;
     return (
         <SafeAreaView style={styles.container__scroll}>
         <Header title="perfil participante"/>
             <ScrollView style={styles.container__perfilPartaker}>
                 <View style={styles.container_perfilPartaker__coverImage}>
-                    <Image style={styles.container_perfilPartaker__perfil} source={require('../../../asset/img/imageDefaut.png')}/>
+                    <Image style={styles.container_perfilPartaker__perfil} source={db.foto}/>
                 </View>
                 <View style={styles.container__data}>
                     <View style={styles.container_data__group}>
-                        <Text style={styles.container_data__name}>{data.nombre}</Text>
+                        <Text style={styles.container_data__name}>{db.nombre}</Text>
                         <View style={styles.container_data__details}>
                             <Text style={styles.container_data_details__information}>Información</Text>
                             <Text style={styles.container_data_details__title}>ID</Text>
-                            <Text style={styles.container_data_details__text}>CO058100{data.id}</Text>
+                            <Text style={styles.container_data_details__text}>CO058100{db.id}</Text>
                             <Text style={styles.container_data_details__title}>Grupo etario</Text>
-                            <Text style={styles.container_data_details__text}>{data.grupoEtario}</Text>
+                            <Text style={styles.container_data_details__text}>{db.grupoEtario}</Text>
                             <Text style={styles.container_data_details__title}>Sexo</Text>
-                            <Text style={styles.container_data_details__text}>{data.genero}</Text>
+                            <Text style={styles.container_data_details__text}>{db.genero}</Text>
                             <Text style={styles.container_data_details__title}>Edad</Text>
-                            <Text style={styles.container_data_details__text}>{data.edad}</Text>
+                            <Text style={styles.container_data_details__text}>{db.edad}</Text>
                             <Text style={styles.container_data_details__title}>Educación</Text>
-                            <Text style={styles.container_data_details__text}>{data.educacion}</Text>
+                            <Text style={styles.container_data_details__text}>{db.educacion}</Text>
                             <Text style={styles.container_data_details__title}>Dirección</Text>
-                            <Text style={styles.container_data_details__text}>{data.direccion}</Text>
+                            <Text style={styles.container_data_details__text}>{db.direccion}</Text>
                             <Text style={styles.container_data_details__title}>Fecha de nacimiento</Text>
-                            <Text style={styles.container_data_details__text}>{data.nacimiento}</Text>
+                            <Text style={styles.container_data_details__text}>{db.nacimiento}</Text>
                         </View>
 
                         <View style={styles.container_data__report}>

@@ -16,8 +16,8 @@ export default function CustomDrawerContent({ navigation }) {
       <View style={styles.container_submenu}>
         <View style={styles.container_submenu__content_perfil}>
 
-          <Image style={styles.content_perfil__Background} blurRadius={25} source={require('../../../asset/img/perfil/staff/asegurador.png')}/>
-          <Image style={styles.content_perfil__perfil} source={require('../../../asset/img/perfil/staff/asegurador.png')}/>
+          <Image style={styles.content_perfil__Background} blurRadius={50} source={require('../../../asset/img/perfil/perfilStaff/asegurador.png')}/>
+          <Image style={styles.content_perfil__perfil} source={require('../../../asset/img/perfil/perfilStaff/asegurador.png')}/>
           <View style={styles.content_perfil__data}>
             <Text style={styles.data__username}>{data.name}</Text>
             <Text style={styles.data__ocupation}>{data.ocupation}</Text>
@@ -87,23 +87,25 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 
-  content_perfil__Background: {
-    width: '100%',
-    height: '100%',
-    position: 'absolute', 
-    resizeMode: 'cover',
-  },
-
   container_submenu__content_perfil: {
     backgroundColor: "#00A1FB",
     width: '100%',
-    height: 260,
+    height: 250,
     borderRadius: 5,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
     position: 'relative', resizeMode: 'cover',
+    borderColor: "#008BDB",
+    borderBottomWidth: 2
+  },
+
+  content_perfil__Background: {
+    width: '100%',
+    height: '100%',
+    position: 'absolute', 
+    resizeMode: 'cover',
   },
 
   content_perfil__perfil: {
@@ -112,8 +114,8 @@ const styles = StyleSheet.create({
     height: 150,
     borderRadius: 100,
     zIndex: 100,
-    border: "3px solid white",
-
+    borderColor: "#FFFFFF",
+    borderWidth: 1,
   },
 
   content_perfil__data: {
@@ -151,11 +153,13 @@ const styles = StyleSheet.create({
   container_submenu__opcions: {
     // backgroundColor: "yellow",
     width: "70%",
+    height: "100%",
     display: "flex",
   },
 
   container_submenu_opcions__iconsAndText: {
     // backgroundColor: "red",
+    width: "100%",
     display: "flex",
     flexDirection: "row",
     alignItems: "center",

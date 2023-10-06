@@ -1,4 +1,5 @@
-import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
+import { FlatList, Image, ScrollView, StyleSheet, Text, View } from "react-native";
+import { useEffect, useState } from "react";
 import ListParticipants from "../components/list-participants";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Header from "../components/layaut/header";
@@ -6,32 +7,37 @@ import * as Constants from 'expo-device';
 // import db_info from "../../../assets/db_info.json";
 
 const List = ({ route, navigation }) => {
+  
   const { db } = route.params;
   const dbPosition = Object.values(db)[4];
-  console.log(dbPosition)
+  const [listPartaker, setListPartker] = useState();
+  
+  useEffect(()=> {
+    setListPartker(dbPosition)
+  },[dbPosition])
 
   return (
     <SafeAreaView style={styles.container}>
-    <Header title="listado"/>
+    <Header title={db.name}/>
       <View style={styles.posts}>
-        <Image style={styles.posts_image} source={require(`../../../assets/img/post/revisionmedica.jpg`)}/>
+        <Image style={styles.posts_image} source={db.foto}/>
       </View> 
       <View style={styles.item}>
         <Text style={styles.title}>{db.name}</Text>
       </View>
-      <ScrollView>
         <View style={styles.list}>
-          <View style={styles.list}>{
-            dbPosition.map((data) => (  
+          <FlatList 
+            data ={listPartaker}
+            keyExtractor={(item) => item.id.toString()}
+            renderItem={({item}) => (
               <ListParticipants
-              key={data.id}
+              key={item.id}
               navigation={navigation}
-              data = {data}
+              db = {item}
               />
-            ))}
-          </View>
+              )}
+          /> 
         </View>
-      </ScrollView>
     </SafeAreaView>
   );
 }
@@ -61,7 +67,7 @@ const styles = StyleSheet.create({
   },
 
   item: {
-    backgroundColor: "transparent",
+    // backgroundColor: "#008BDB",
     zIndex: 5,
     height: 30,
     width: '100%',
@@ -71,7 +77,7 @@ const styles = StyleSheet.create({
   
   title: {
     color: "white",
-    height: 35,
+    height: "auto",
     fontSize: 23,
     fontWeight: "bold",
   },

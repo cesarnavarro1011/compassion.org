@@ -51,7 +51,7 @@ function SessionForm({ navigation }) {
 
   };
     return <Center w="100%"> 
-        <Image source={require('../../../asset/img/logos/sembrando_la_preciosa_semilla.png')}
+        <Image source={require('../../../asset/img/logos/funsemilla.png')}
           alt="logo cdi-581" 
           style={styles.logo_cdi}
         />

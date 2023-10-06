@@ -13,8 +13,7 @@ export default function MenuOpcions({ nameText }) {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#00A6FB",
-    width: '90%',
-    height: "100%",
+    width: '100%',
     height: 70,
     paddingTop: 22,
     paddingLeft: 10,
@@ -24,9 +23,9 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    width: 100,
+    width: '100%',
     height: "100%",
     color: "white",
-    fontSize: 15,
+    fontSize: 17,
   },
 })
