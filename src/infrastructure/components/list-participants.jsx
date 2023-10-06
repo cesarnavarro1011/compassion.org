@@ -13,7 +13,9 @@ export default function ListParticipants( props ) {
             })
           }}
       >
+        <View style={styles.contentImgParticipants}>
           <Image style={styles.imgParticipants} source={db.foto} keyExtractor={(db) => db.id}/>
+        </View>
         <Text style={styles.nameParticipants}>{db.nombre}</Text>
       </TouchableOpacity>
   );
@@ -35,13 +37,18 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
 
+  contentImgParticipants: {
+    width: 50,
+    height: 50,
+  },
+
   imgParticipants: {
     backgroundColor: "#0582CA",
     width: 50,
     height: 50,
     borderRadius: 25,
-    resizeMode: 'contain',
-  },
+    resizeMode: 'cover',
+    },
 
   nameParticipants: {
     color: "black",

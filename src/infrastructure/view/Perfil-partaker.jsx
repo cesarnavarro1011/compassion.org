@@ -7,9 +7,10 @@ export default function PerfilPartaker({ route, navigation }) {
     const { db } = route.params;
     return (
         <SafeAreaView style={styles.container__scroll}>
-        <Header title="perfil participante"/>
+        {/* <Header title="perfil participante"/> */}
             <ScrollView style={styles.container__perfilPartaker}>
                 <View style={styles.container_perfilPartaker__coverImage}>
+                    <Image style={styles.container_perfilPartaker__background_image} blurRadius={5} source={db.foto}/>
                     <Image style={styles.container_perfilPartaker__perfil} source={db.foto}/>
                 </View>
                 <View style={styles.container__data}>
@@ -73,6 +74,13 @@ const styles = StyleSheet.create({
         justifyContent: "flex-end",
         alignItems: "center",
         zIndex: 1,
+    },
+    
+    container_perfilPartaker__background_image: {
+        position: 'absolute',
+        width: "100%",
+        height: 190,
+        resizeMode: 'cover',
     },
 
     container_perfilPartaker__perfil: {

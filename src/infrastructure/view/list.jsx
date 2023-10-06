@@ -18,7 +18,7 @@ const List = ({ route, navigation }) => {
 
   return (
     <SafeAreaView style={styles.container}>
-    <Header title={db.name}/>
+    {/* <Header title={db.name}/> */}
       <View style={styles.posts}>
         <Image style={styles.posts_image} source={db.foto}/>
       </View> 
@@ -57,13 +57,13 @@ const styles = StyleSheet.create({
     zIndex: 3,
     backgroundColor: "#00A6FB",         
     width: '100%',
-    height: 120,
+    height: 135,
   },
 
   posts_image: {
     zIndex: 4,
     width: 500,
-    height: 155,
+    height: 170,
   },
 
   item: {
