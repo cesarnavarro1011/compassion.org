@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 const CardReportHome = (props) => {
-  const { onPress, title, description } = props 
+  const { onPress, title, cantidad } = props 
   return (
     <TouchableOpacity 
       style = { styles.container }
@@ -12,7 +12,7 @@ const CardReportHome = (props) => {
       </Text>
 
       <Text style = { styles.container__description}>
-        {description}
+        {cantidad}
       </Text>
     </TouchableOpacity>
     
@@ -23,7 +23,7 @@ export default CardReportHome
   const styles = StyleSheet.create({
 
     container: {
-      backgroundColor: '#49B6FF',
+      backgroundColor: '#00A6FB',
       width: "47%",
       height: 110,
       borderRadius: 5,

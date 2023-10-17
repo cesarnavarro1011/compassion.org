@@ -5,11 +5,12 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { TouchableOpacity } from "react-native-gesture-handler";
-import db_project from "../../../asset/db_project.json";
+import db_project from "../../../asset/db_project";
 
 export default function CustomDrawerContent({ navigation }) {
-    const db = Object.values(db_project)[1];
-    const data = db.filter((x)=>(x.id=== 22))[0]
+  const x_position_db = db_project[0]
+    const db = Object.values(x_position_db)[1];
+    const data = Object.values(db).filter((x)=>(x.id===22))[0];
     // console.log(data);
   return (
     <SafeAreaView style={styles.container_menu}>
@@ -110,8 +111,8 @@ const styles = StyleSheet.create({
 
   content_perfil__perfil: {
     // backgroundColor: "yellow",
-    width: 150,
-    height: 150,
+    width: 140,
+    height: 140,
     borderRadius: 100,
     zIndex: 100,
     borderColor: "#FFFFFF",
